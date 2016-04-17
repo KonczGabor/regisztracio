@@ -1,15 +1,14 @@
-
 <%@ page import="java.util.*, com.regisztracio.models.*"%>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8">
 <title>TermészetesSzemély</title>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-	<form method="POST" action="SaveTSZ">
+	<form method="POST" action="SaveBTSZ">
 
 		<div class="container marketing">
 
@@ -65,7 +64,7 @@
 
 	</form>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>	
+
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet"
@@ -84,7 +83,5 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 		crossorigin="anonymous"></script>
-		
-	
 </body>
 </html>
