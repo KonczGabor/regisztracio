@@ -1,5 +1,5 @@
 package com.regisztracio.models;
 
-public enum GyermekJogosuktsaga {
+public enum GyermekJogosultsaga {
 	GyermekvédelmiÉsÁtmenetiVagyTartós, Normál, ÁtmeneteiVagyTartósNevelésbeVett, GyermekvédelmiKedvezményreJogosult
 }

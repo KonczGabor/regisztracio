@@ -54,7 +54,7 @@ public class KStartEpSzamla implements Serializable {
 	
 	private String anyjaUtoNeve;
 	
-	private GyermekJogosuktsaga GyermekJogosuktsaga;
+	private GyermekJogosultsaga GyermekJogosuktsaga;
 	
 	private NevelesJellege nevelesJellege;	
 	
@@ -196,11 +196,11 @@ public class KStartEpSzamla implements Serializable {
 		this.anyjaUtoNeve = anyjaUtoNeve;
 	}
 
-	public GyermekJogosuktsaga getGyermekJogosuktsaga() {
+	public GyermekJogosultsaga getGyermekJogosuktsaga() {
 		return GyermekJogosuktsaga;
 	}
 
-	public void setGyermekJogosuktsaga(GyermekJogosuktsaga gyermekJogosuktsaga) {
+	public void setGyermekJogosuktsaga(GyermekJogosultsaga gyermekJogosuktsaga) {
 		GyermekJogosuktsaga = gyermekJogosuktsaga;
 	}
 

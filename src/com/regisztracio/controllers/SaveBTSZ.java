@@ -45,12 +45,13 @@ public class SaveBTSZ extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		
-		String keresztNev = request.getParameter("keresztNev");
-		String vezetekNev = request.getParameter("vezetekNev");
+		String keresztNev = request.getParameter("keresztNevId");
+		String vezetekNev = request.getParameter("vezetekNevId");
 		
 		BelfoldiTermeszetesSzemely btsz = new BelfoldiTermeszetesSzemely();
 		
-	
+		btsz.setNevVezetek(vezetekNev);
+		btsz.setNevKeresztv(keresztNev);
 		
 		termeszetesService.addNewBTSZ(btsz);
 		
