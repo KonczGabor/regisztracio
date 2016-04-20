@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,63 +28,64 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	public BelfoldiTermeszetesSzemely() {
 		super();
 	}
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
-	private String nevElotag;
-	
-	private String nevVezetek;
-	
-	private String nevKeresztv;
-	
-	private String nevUto;
-	
-	private String nevSzuletesi;	
 
+	private String nevElotag;
+
+	private String nevVezetek;
+
+	private String nevKeresztv;
+
+	private String nevUto;
+
+	private String nevSzuletesi;
+
+	@Enumerated(EnumType.STRING)
 	private Allampolgarsag allampolgarsag;
-	
+
 	private Integer adoazonositoJel;
-	
+
 	private String szigSzam;
-	
-	private String szigKHNeve; //Szem�lyi igazolv�ny ki�ll�t� hat�s�g neve
-	
+
+	private String szigKHNeve; // Személyi igazolvány kiállító hatóság neve
+
 	private String szigKHSzekhelye;
-	
+
 	private String lakcimkartya;
-	
+
 	private Date szulIdo;
-	
+
 	private String szulHely;
-	
+
 	private String anyjaNeve;
-	
+
 	private String utlevelSzama;
-	
+
 	private String jogositvanySzama;
-	
-	private boolean webKincstar = false;
-	
-	private boolean mobilKincstar = false;
-	
-	private boolean teleKincstar = false;
-	
-	private SzamlaKivGyakorisag szamlaKivGyakorisag = SzamlaKivGyakorisag.Évente; 
-	
-	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalással;
-	
-	private String giroSzamla;	
-	
+
+	private boolean webSzolgaltatas = false;
+
+	private boolean teleSzolgaltatas = false;
+
+	@Enumerated(EnumType.STRING)
+	private SzamlaKivGyakorisag szamlaKivGyakorisag = SzamlaKivGyakorisag.Evente;
+
+	@Enumerated(EnumType.STRING)
+	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalassal;
+
+	private String giroSzamla;
+
 	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
 	@JoinColumn(name = "lakhely_fk")
 	private AllandoLakhely allandoLakhely;
-	
+
 	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
 	@JoinColumn(name = "levelezesiCim_fk")
 	private LevelezesiCim lvcBTSZ;
-	
+
 	public Integer getId() {
 		return id;
 	}
@@ -215,28 +218,20 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.jogositvanySzama = jogositvanySzama;
 	}
 
-	public boolean isWebKincstar() {
-		return webKincstar;
+	public boolean getWebSzolgaltatas() {
+		return webSzolgaltatas;
 	}
 
-	public void setWebKincstar(boolean webKincstar) {
-		this.webKincstar = webKincstar;
+	public void setWebSzolgaltatas(boolean webSzolgaltatas) {
+		this.webSzolgaltatas = webSzolgaltatas;
 	}
 
-	public boolean isMobilKincstar() {
-		return mobilKincstar;
+	public boolean getTeleSzolgaltatas() {
+		return teleSzolgaltatas;
 	}
 
-	public void setMobilKincstar(boolean mobilKincstar) {
-		this.mobilKincstar = mobilKincstar;
-	}
-
-	public boolean isTeleKincstar() {
-		return teleKincstar;
-	}
-
-	public void setTeleKincstar(boolean teleKincstar) {
-		this.teleKincstar = teleKincstar;
+	public void setTeleSzolgaltatas(boolean teleSzolgaltatas) {
+		this.teleSzolgaltatas = teleSzolgaltatas;
 	}
 
 	public SzamlaKivGyakorisag getSzamlaKivGyakorisag() {
@@ -270,10 +265,10 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 				+ ", allampolgarsag=" + allampolgarsag + ", adoazonositoJel=" + adoazonositoJel + ", szigSzam="
 				+ szigSzam + ", szigKHNeve=" + szigKHNeve + ", szigKHSzekhelye=" + szigKHSzekhelye + ", lakcimkartya="
 				+ lakcimkartya + ", szulIdo=" + szulIdo + ", szulHely=" + szulHely + ", anyjaNeve=" + anyjaNeve
-				+ ", utlevelSzama=" + utlevelSzama + ", jogositvanySzama=" + jogositvanySzama + ", webKincstar="
-				+ webKincstar + ", mobilKincstar=" + mobilKincstar + ", teleKincstar=" + teleKincstar
-				+ ", szamlaKivGyakorisag=" + szamlaKivGyakorisag + ", esedekessegFizMod=" + esedekessegFizMod
-				+ ", giroSzamla=" + giroSzamla + "]";
+				+ ", utlevelSzama=" + utlevelSzama + ", jogositvanySzama=" + jogositvanySzama + ", webSzolgaltatas="
+				+ webSzolgaltatas + ", teleSzolgaltatas=" + teleSzolgaltatas + ", szamlaKivGyakorisag="
+				+ szamlaKivGyakorisag + ", esedekessegFizMod=" + esedekessegFizMod + ", giroSzamla=" + giroSzamla
+				+ ", allandoLakhely=" + allandoLakhely + ", lvcBTSZ=" + lvcBTSZ + "]";
 	}
-	
+
 }

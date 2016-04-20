@@ -62,11 +62,11 @@ public class KStartEpSzamla implements Serializable {
 	
 	private String jogositvanySzama;	
 	
-	private boolean webKincstar = false;
+	private boolean webSzolgaltatas = false;
 	
-	private boolean mobilKincstar = false;
+	private boolean mobilSzolgaltatas = false;
 	
-	private boolean teleKincstar = false;
+	private boolean teleSzolgaltatas = false;
 
 	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
 	@JoinColumn(name = "lakhely_fk")
@@ -228,28 +228,28 @@ public class KStartEpSzamla implements Serializable {
 		this.jogositvanySzama = jogositvanySzama;
 	}
 
-	public boolean isWebKincstar() {
-		return webKincstar;
+	public boolean isWebSzolgaltatas() {
+		return webSzolgaltatas;
 	}
 
-	public void setWebKincstar(boolean webKincstar) {
-		this.webKincstar = webKincstar;
+	public void setWebSzolgaltatas(boolean webSzolgaltatas) {
+		this.webSzolgaltatas = webSzolgaltatas;
 	}
 
-	public boolean isMobilKincstar() {
-		return mobilKincstar;
+	public boolean isMobilSzolgaltatas() {
+		return mobilSzolgaltatas;
 	}
 
-	public void setMobilKincstar(boolean mobilKincstar) {
-		this.mobilKincstar = mobilKincstar;
+	public void setMobilSzolgaltatas(boolean mobilSzolgaltatas) {
+		this.mobilSzolgaltatas = mobilSzolgaltatas;
 	}
 
-	public boolean isTeleKincstar() {
-		return teleKincstar;
+	public boolean isTeleSzolgaltatas() {
+		return teleSzolgaltatas;
 	}
 
-	public void setTeleKincstar(boolean teleKincstar) {
-		this.teleKincstar = teleKincstar;
+	public void setTeleSzolgaltatas(boolean teleSzolgaltatas) {
+		this.teleSzolgaltatas = teleSzolgaltatas;
 	}
 
 	public AllandoLakhely getAllandoLakhely() {
@@ -280,8 +280,8 @@ public class KStartEpSzamla implements Serializable {
 				+ szigKHNeve + ", szigKHSzekhelye=" + szigKHSzekhelye + ", lakcimkartya=" + lakcimkartya + ", szulIdo="
 				+ szulIdo + ", szulHely=" + szulHely + ", anyjaCsaladiNeve=" + anyjaCsaladiNeve + ", anyjaUtoNeve="
 				+ anyjaUtoNeve + ", GyermekJogosuktsaga=" + GyermekJogosuktsaga + ", nevelesJellege=" + nevelesJellege
-				+ ", utlevelSzama=" + utlevelSzama + ", jogositvanySzama=" + jogositvanySzama + ", webKincstar="
-				+ webKincstar + ", mobilKincstar=" + mobilKincstar + ", teleKincstar=" + teleKincstar
+				+ ", utlevelSzama=" + utlevelSzama + ", jogositvanySzama=" + jogositvanySzama + ", webSzolgaltatas="
+				+ webSzolgaltatas + ", mobilSzolgaltatas=" + mobilSzolgaltatas + ", teleSzolgaltatas=" + teleSzolgaltatas
 				+ ", allandoLakhely=" + allandoLakhely + ", lvcBTSZ=" + lvcBTSZ + "]";
 	}
 	

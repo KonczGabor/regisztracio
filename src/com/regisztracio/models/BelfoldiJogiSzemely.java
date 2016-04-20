@@ -40,15 +40,15 @@ public class BelfoldiJogiSzemely implements Serializable {
 	
 	private String egyStatSzam;
 	
-	private boolean webKincstar = false;
+	private boolean webSzolgaltatas = false;
 	
-	private boolean mobilKincstar = false;
+	private boolean mobilSzolgaltatas = false;
 	
-	private boolean teleKincstar = false;
+	private boolean teleSzolgaltatas = false;
 	
-	private SzamlaKivGyakorisag szamlaKivGyakorisag = SzamlaKivGyakorisag.Évente; 
+	private SzamlaKivGyakorisag szamlaKivGyakorisag = SzamlaKivGyakorisag.Evente; 
 	
-	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalással;
+	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalassal;
 	
 	private String giroSzamla;
 	
@@ -120,28 +120,28 @@ public class BelfoldiJogiSzemely implements Serializable {
 		this.egyStatSzam = egyStatSzam;
 	}
 
-	public boolean isWebKincstar() {
-		return webKincstar;
+	public boolean isWebSzolgaltatas() {
+		return webSzolgaltatas;
 	}
 
-	public void setWebKincstar(boolean webKincstar) {
-		this.webKincstar = webKincstar;
+	public void setWebSzolgaltatas(boolean webSzolgaltatas) {
+		this.webSzolgaltatas = webSzolgaltatas;
 	}
 
-	public boolean isMobilKincstar() {
-		return mobilKincstar;
+	public boolean isMobilSzolgaltatas() {
+		return mobilSzolgaltatas;
 	}
 
-	public void setMobilKincstar(boolean mobilKincstar) {
-		this.mobilKincstar = mobilKincstar;
+	public void setMobilSzolgaltatas(boolean mobilSzolgaltatas) {
+		this.mobilSzolgaltatas = mobilSzolgaltatas;
 	}
 
-	public boolean isTeleKincstar() {
-		return teleKincstar;
+	public boolean isTeleSzolgaltatas() {
+		return teleSzolgaltatas;
 	}
 
-	public void setTeleKincstar(boolean teleKincstar) {
-		this.teleKincstar = teleKincstar;
+	public void setTeleSzolgaltatas(boolean teleSzolgaltatas) {
+		this.teleSzolgaltatas = teleSzolgaltatas;
 	}
 
 	public SzamlaKivGyakorisag getSzamlaKivGyakorisag() {
@@ -185,8 +185,8 @@ public class BelfoldiJogiSzemely implements Serializable {
 		return "BelfoldiJogiSzemely [id=" + id + ", jogiSzemelyNeve=" + jogiSzemelyNeve + ", adoszam=" + adoszam
 				+ ", telephely=" + telephely + ", alapitoOkiratSzama=" + alapitoOkiratSzama + ", tSzKelte=" + tSzKelte
 				+ ", alapitokTulajdonosok=" + alapitokTulajdonosok + ", cegBejKelte=" + cegBejKelte + ", egyStatSzam="
-				+ egyStatSzam + ", webKincstar=" + webKincstar + ", mobilKincstar=" + mobilKincstar + ", teleKincstar="
-				+ teleKincstar + ", szamlaKivGyakorisag=" + szamlaKivGyakorisag + ", esedekessegFizMod="
+				+ egyStatSzam + ", webSzolgaltatas=" + webSzolgaltatas + ", mobilSzolgaltatas=" + mobilSzolgaltatas + ", teleSzolgaltatas="
+				+ teleSzolgaltatas + ", szamlaKivGyakorisag=" + szamlaKivGyakorisag + ", esedekessegFizMod="
 				+ esedekessegFizMod + ", giroSzamla=" + giroSzamla + ", szekhely=" + szekhely + "]";
 	}
 	

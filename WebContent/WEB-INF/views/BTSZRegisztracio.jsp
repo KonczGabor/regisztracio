@@ -1,12 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8" %>
 
-<%@ page import="java.util.*, com.regisztracio.models.*"%>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <title>TermészetesSzemély</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="resources/css/styles.css" />
@@ -26,7 +22,7 @@
 						<div class="col-md-4">
 							<p>Név - előtag</p>
 							<div class="input-group">
-								<input name="elotagId" type="text" class="form-control"
+								<input required name="elotagId" type="text" class="form-control"
 									placeholder="" aria-describedby="basic-addon1">
 							</div>
 						</div>
@@ -37,7 +33,6 @@
 
 					<div class="row featurette">
 						<div class="col-md-4">
-							<p>Név - vezetéknév*</p>
 							<label for="vezetekNevId">Név - vezetéknév*</label>
 							<div class="input-group">
 								<input name="vezetekNevId" type="text" class="form-control"
@@ -48,15 +43,15 @@
 						<div class="col-md-4">
 							<p>Név - első utóneve*</p>
 							<div class="input-group">
-								<input name="keresztNevId" type="text" class="form-control" placeholder=""
-									aria-describedby="basic-addon1">
+								<input name="keresztNevId" type="text" class="form-control"
+									placeholder="" aria-describedby="basic-addon1">
 							</div>
 						</div>
 
 						<div class="col-md-4">
 							<p>Név - második utóneve</p>
 							<div class="input-group">
-								<input name="ar" type="text" class="form-control" placeholder=""
+								<input name="masodikUtonevId" type="text" class="form-control" placeholder=""
 									aria-describedby="basic-addon1">
 							</div>
 						</div>
@@ -68,7 +63,7 @@
 						<div class="col-md-4">
 							<p>Leánykori / Születési név</p>
 							<div class="input-group">
-								<input name="elotagId" type="text" class="form-control"
+								<input name="szuletesiNevId" type="text" class="form-control"
 									placeholder="" aria-describedby="basic-addon1">
 							</div>
 						</div>
@@ -98,7 +93,7 @@
 								<div class="row featurette">
 									<p>Ország*</p>
 									<div class="form-group">
-										<select class="form-control" name="orszagok">
+										<select class="form-control" name="orszagokId">
 											<option value="Dunaujvaros">Dunaujvaros</option>
 											<option value="Budapest">Budapest</option>
 											<option value="Szeged">Szeged</option>
@@ -162,7 +157,7 @@
 								<div class="row featurette">
 									<p>Ország</p>
 									<div class="form-group">
-										<select class="form-control" name="lvlOrszagok">
+										<select class="form-control" name="lvlOrszagokId">
 											<option value="Dunaujvaros">Dunaujvaros</option>
 											<option value="Budapest">Budapest</option>
 											<option value="Szeged">Szeged</option>
@@ -296,7 +291,7 @@
 									<p>Születési idő*</p>
 									<div class="input-group">
 										<input name="szuletesiIdoId" type="text" class="form-control"
-											placeholder="Év/Hó/Nap" aria-describedby="basic-addon1">
+											placeholder="/Hó/Nap/Év" aria-describedby="basic-addon1">
 									</div>
 								</div>
 								<!-- Panel4 row7 -->
@@ -360,39 +355,41 @@
 								kapcsolatos adatok</h3>
 						</div>
 						<div class="panel-body">
-							<div class="row featurette">
-								<p>Szeretne-e Web szolgáltatást igényelni?*</p>
-								<div class="form-group">
-									<select class="form-control" name="webSzolgaltatasId">
-										<option value="Igen">Igen</option>
-										<option value="Nem">Nem</option>
-									</select>
+							<div class="ContainerSajat">
+								<div class="row featurette">
+									<p>Szeretne-e Web szolgáltatást igényelni?*</p>
+									<div class="form-group">
+										<select class="form-control" name="webSzolgaltatasId">
+											<option value="Igen">Igen</option>
+											<option value="Nem">Nem</option>
+										</select>
+									</div>
 								</div>
-							</div>
-							<!-- Panel5 row1 -->
+								<!-- Panel5 row1 -->
 
-							<div class="row featurette">
-								<p>Szeretne-e Web szolgáltatást igényelni?*</p>
-								<div class="input-group">
-									<input name="webSzolgaltatas2Id" type="text"
-										class="form-control" placeholder=""
-										aria-describedby="basic-addon1">
+								<div class="row featurette">
+									<p>Szeretne-e Web szolgáltatást igényelni?*</p>
+									<div class="input-group">
+										<input name="webSzolgaltatas2Id" type="text"
+											class="form-control" placeholder=""
+											aria-describedby="basic-addon1">
+									</div>
 								</div>
-							</div>
-							<!-- Panel4 row2 -->
+								<!-- Panel4 row2 -->
 
-
-
-							<div class="row featurette">
-								<p>Szeretne-e Telefonos szolgáltatást igényelni?*</p>
-								<div class="form-group">
-									<select class="form-control" name="teleSzolgaltatasId">
-										<option value="Igen">Igen</option>
-										<option value="Nem">Nem</option>
-									</select>
+								<div class="row featurette">
+									<p>Szeretne-e Telefonos szolgáltatást igényelni?*</p>
+									<div class="form-group">
+										<select class="form-control" name="teleSzolgaltatasId">
+											<option value="Igen">Igen</option>
+											<option value="Nem">Nem</option>
+										</select>
+									</div>
 								</div>
+								<!-- Panel5 row3 -->
+
 							</div>
-							<!-- Panel5 row3 -->
+							<!--ContainerSajat Panel6 belső-->
 
 						</div>
 						<!-- Panel5 - body -->
@@ -408,9 +405,9 @@
 								<div class="row featurette">
 									<p>Számlakivonat gyakorisága*</p>
 									<div class="form-group">
-										<select class="form-control" name="webSzolgaltatasId">
-											<option value="Évente">Évente</option>
-											<option value="NemKér">Nem Kér</option>
+										<select class="form-control" name="szlaGyakorisagId">
+											<option value="Evente">Évente</option>
+											<option value="NemKer">Nem Kér</option>
 										</select>
 									</div>
 								</div>
@@ -419,9 +416,9 @@
 								<div class="row featurette">
 									<p>Esedékességfizetés módja*</p>
 									<div class="form-group">
-										<select class="form-control" name="webSzolgaltatasId">
-											<option value="BankiUtalással">Készpénz-számla</option>
-											<option value="KészpénzPénzszámla">Banki utalással</option>
+										<select class="form-control" name="esedekessegId">
+											<option value="BankiUtalassal">Készpénz-számla</option>
+											<option value="KeszpenzPenzszamla">Banki utalással</option>
 										</select>
 									</div>
 								</div>
@@ -454,9 +451,9 @@
 
 			<div class="row featurette">
 				<div class="col-md-6">
-				
+
 					<a href="index.html" class="btn btn-info" role="button">Mégse</a>
-				
+
 				</div>
 				<!-- col-md-6 1 -->
 
@@ -464,6 +461,8 @@
 
 					<button type="submit" class="btn btn-primary" aria-pressed="false"
 						autocomplete="off">Regisztráció</button>
+
+					<input type="date" />
 
 				</div>
 				<!-- col-md-6 2 -->
