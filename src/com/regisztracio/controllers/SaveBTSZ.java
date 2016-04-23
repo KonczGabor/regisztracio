@@ -63,8 +63,8 @@ public class SaveBTSZ extends HttpServlet {
 		String utcaHazszam = request.getParameter("utcaHazszamId");
 		
 		String lvlOrszagok = request.getParameter("lvlOrszagokId");
-		String lvlIranyitoszam = request.getParameter("lvlIranyitoszamId");
-		String lvlHelysegI = request.getParameter("lvlHelysegId");		
+		Integer lvlIranyitoszam = Integer.parseInt(request.getParameter("lvlIranyitoszamId"));
+		String lvlHelyseg = request.getParameter("lvlHelysegId");		
 		String lvlUtcaHazszam = request.getParameter("lvlUtcaHazszamId");
 		
 		String allampolgarsagok = request.getParameter("allampolgarsagokId");
@@ -87,13 +87,13 @@ public class SaveBTSZ extends HttpServlet {
 		String utlevelSzama = request.getParameter("utlevelSzamaId");
 		String jogositvanySzama = request.getParameter("jogositvanySzamaId");
 		
-		Boolean webSzolgaltatas = Boolean.valueOf(request.getParameter("webSzolgaltatasId"));
+		String webSzolgaltatas = request.getParameter("webSzolgaltatasId");
 		String mobilSzolgaltatas = request.getParameter("mobilSzolgaltatasId");
-		Boolean teleSzolgaltatas = Boolean.valueOf(request.getParameter("teleSzolgaltatasId"));
+		String teleSzolgaltatas = request.getParameter("teleSzolgaltatasId");
 		
 		String szlaGyakorisag = request.getParameter("szlaGyakorisagId");
 		String esedekesseg = request.getParameter("esedekessegId");
-		String giroSzamlaId = request.getParameter("giroSzamlaIdId");
+		String giroSzamla = request.getParameter("giroSzamlaId");
 	
 		
 		
@@ -105,12 +105,16 @@ public class SaveBTSZ extends HttpServlet {
 		btsz.setNevVezetek(keresztNev);
 		btsz.setNevUto(masodikUtonev);
 		btsz.setNevSzuletesi(szuletesiNev);
+		
 		btsz.setOrszag(Orszag.valueOf(orszagok));
 		btsz.setIranyitoszam(iranyitoszam);
 		btsz.setHelyseg(helyseg);
 		btsz.setUtcaHazszam(utcaHazszam);
-		btsz.setLvlOrszag(Orszag.valueOf(lvlOrszagok));
-		
+				
+		btsz.setOrszag(Orszag.valueOf(lvlOrszagok));
+		btsz.setIranyitoszam(lvlIranyitoszam);
+		btsz.setHelyseg(lvlHelyseg);
+		btsz.setUtcaHazszam(lvlUtcaHazszam);
 		
 		btsz.setAllampolgarsag(Allampolgarsag.valueOf(allampolgarsagok));
 		btsz.setAdoazonositoJel(adoazonositoJel);
@@ -124,11 +128,11 @@ public class SaveBTSZ extends HttpServlet {
 		btsz.setUtlevelSzama(utlevelSzama);
 		btsz.setJogositvanySzama(jogositvanySzama);
 		btsz.setWebSzolgaltatas(webSzolgaltatas);
-//		btsz.setMobilSzolgaltatas(mobilSzolgaltatas);
-		btsz.setTeleSzolgaltatas(teleSzolgaltatas);		
+		btsz.setMobilSzolgaltatas(mobilSzolgaltatas);
+		btsz.setTelSzolgaltatas(teleSzolgaltatas);		
 		btsz.setSzamlaKivGyakorisag(SzamlaKivGyakorisag.valueOf(szlaGyakorisag));
 		btsz.setEsedekessegFizMod(EsedekessegFizMod.valueOf(esedekesseg));
-		btsz.setGiroSzamla(giroSzamlaId);
+		btsz.setGiroSzamla(giroSzamla);
 		
 	
 		

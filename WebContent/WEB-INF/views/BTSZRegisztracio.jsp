@@ -36,7 +36,7 @@
 							<label for="vezetekNevId">Név - vezetéknév*</label>
 							<div class="input-group">
 								<input name="vezetekNevId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1"  pattern="[A-Z]+[a-z]*"  title="Nagy kezdőbetűvel kell kezdődnie, számot és különleges írásjelet nem tartalmazhat!" >
+									placeholder="" aria-describedby="basic-addon1">
 							</div>
 						</div>
 
@@ -44,7 +44,7 @@
 							<p>Név - első utóneve*</p>
 							<div class="input-group">
 								<input name="keresztNevId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1" pattern="[A-Z]+[a-z]*"  title="Nagy kezdőbetűvel kell kezdődnie, számot és különleges írásjelet nem tartalmazhat!">
+									placeholder="" aria-describedby="basic-addon1">
 							</div>
 						</div>
 
@@ -109,7 +109,7 @@
 									<p>Irányítószám*</p>
 									<div class="input-group">
 										<input name="iranyitoszamId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1" pattern="[0-9]+"  title=" Csak számot tartalmazhat!">
+											placeholder="" aria-describedby="basic-addon1">
 									</div>
 								</div>
 								<!-- Panel2 row2 -->
@@ -358,16 +358,18 @@
 							<div class="ContainerSajat">
 								<div class="row featurette">
 									<p>Szeretne-e Web szolgáltatást igényelni?*</p>
-									<label for="chkYes"> <input type="radio" id="chkYes"
-										name="chkEmail" onclick="ShowHideDiv()" /> Igen
-									</label> <label for="chkNo"> <input type="radio" id="chkNo"
-										name="chkEmail" onclick="ShowHideDiv()" checked="checked"/> Nem
+									<label for="chkYesWeb"> <input type="radio"
+										id="chkYesWeb" name="chkWeb" onclick="ShowHideDivWeb()" />
+										Igen
+									</label> <label for="chkNo"> <input type="radio" id="chkNoWeb"
+										name="chkWeb" onclick="ShowHideDivWeb()" checked="checked" />
+										Nem
 									</label>
-									<div id="emailArea" style="display: none">
+									<div id="webArea" style="display: none">
 										<div class="input-group">
-											<input name="emailCim" id=emailInput type="text"
+											<input name="webSzolgaltatasId" id=emailInput type="email"
 												class="form-control" placeholder="myaddress@provider.com"
-												aria-describedby="basic-addon1" >
+												aria-describedby="basic-addon1">
 										</div>
 									</div>
 									<hr />
@@ -376,22 +378,41 @@
 
 								<div class="row featurette">
 									<p>Szeretne-e Mobil szolgáltatást igényelni?*</p>
-									<div class="input-group">
-										<input name="mobilSzolgaltatasId" type="text"
-											class="form-control" placeholder=""
-											aria-describedby="basic-addon1">
+									<label for="chkYesMobil"> <input type="radio"
+										id="chkYesMobil" name="chkMobil" onclick="ShowHideDivMobil()" />
+										Igen
+									</label> <label for="chkNo"> <input type="radio" id="chkNoMobil"
+										name="chkMobil" onclick="ShowHideDivMobil()" checked="checked" />
+										Nem
+									</label>
+									<div id="mobilArea" style="display: none">
+										<div class="input-group">
+											<input name="mobilSzolgaltatasId" id=mobilInput type="text"
+												class="form-control" placeholder="06-30-123-456"
+												aria-describedby="basic-addon1">
+										</div>
 									</div>
+									<hr />
 								</div>
 								<!-- Panel4 row2 -->
 
 								<div class="row featurette">
 									<p>Szeretne-e Telefonos szolgáltatást igényelni?*</p>
-									<div class="form-group">
-										<select class="form-control" name="teleSzolgaltatasId">
-											<option value="Igen">Igen</option>
-											<option value="Nem">Nem</option>
-										</select>
+									<label for="chkYesTel"> <input type="radio"
+										id="chkYesTel" name="chkTel" onclick="ShowHideDivTel()" />
+										Igen
+									</label> <label for="chkNo"> <input type="radio" id="chkNoTel"
+										name="chkTel" onclick="ShowHideDivTel()" checked="checked" />
+										Nem
+									</label>
+									<div id="telArea" style="display: none">
+										<div class="input-group">
+											<input name="teleSzolgaltatasId" id=telInput type="text"
+												class="form-control" placeholder="06-30-123-456"
+												aria-describedby="basic-addon1">
+										</div>
 									</div>
+									<hr />
 								</div>
 								<!-- Panel5 row3 -->
 

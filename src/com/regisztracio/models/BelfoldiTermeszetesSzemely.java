@@ -79,11 +79,11 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	private String jogositvanySzama;
 
-	private boolean webSzolgaltatas = false;
+	private String webSzolgaltatas = "";
 
-	private boolean mobilSzolgaltatas = false;
+	private String mobilSzolgaltatas = "";
 
-	private boolean teleSzolgaltatas = false;
+	private String telSzolgaltatas = "";
 
 	@Enumerated(EnumType.STRING)
 	private SzamlaKivGyakorisag szamlaKivGyakorisag = SzamlaKivGyakorisag.Evente;
@@ -133,14 +133,6 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.nevSzuletesi = nevSzuletesi;
 	}
 
-	public Allampolgarsag getAllampolgarsag() {
-		return allampolgarsag;
-	}
-
-	public void setAllampolgarsag(Allampolgarsag allampolgarsag) {
-		this.allampolgarsag = allampolgarsag;
-	}
-
 	public Orszag getOrszag() {
 		return orszag;
 	}
@@ -173,14 +165,6 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.utcaHazszam = utcaHazszam;
 	}
 
-	public Integer getAdoazonositoJel() {
-		return adoazonositoJel;
-	}
-
-	public void setAdoazonositoJel(Integer adoazonositoJel) {
-		this.adoazonositoJel = adoazonositoJel;
-	}
-
 	public Orszag getLvlOrszag() {
 		return lvlOrszag;
 	}
@@ -211,6 +195,22 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	public void setLvlUtcaHazszam(String lvlUtcaHazszam) {
 		this.lvlUtcaHazszam = lvlUtcaHazszam;
+	}
+
+	public Allampolgarsag getAllampolgarsag() {
+		return allampolgarsag;
+	}
+
+	public void setAllampolgarsag(Allampolgarsag allampolgarsag) {
+		this.allampolgarsag = allampolgarsag;
+	}
+
+	public Integer getAdoazonositoJel() {
+		return adoazonositoJel;
+	}
+
+	public void setAdoazonositoJel(Integer adoazonositoJel) {
+		this.adoazonositoJel = adoazonositoJel;
 	}
 
 	public String getSzigSzam() {
@@ -285,28 +285,28 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.jogositvanySzama = jogositvanySzama;
 	}
 
-	public boolean isWebSzolgaltatas() {
+	public String getWebSzolgaltatas() {
 		return webSzolgaltatas;
 	}
 
-	public void setWebSzolgaltatas(boolean webSzolgaltatas) {
+	public void setWebSzolgaltatas(String webSzolgaltatas) {
 		this.webSzolgaltatas = webSzolgaltatas;
 	}
 
-	public boolean isMobilSzolgaltatas() {
+	public String getMobilSzolgaltatas() {
 		return mobilSzolgaltatas;
 	}
 
-	public void setMobilSzolgaltatas(boolean mobilSzolgaltatas) {
+	public void setMobilSzolgaltatas(String mobilSzolgaltatas) {
 		this.mobilSzolgaltatas = mobilSzolgaltatas;
 	}
 
-	public boolean isTeleSzolgaltatas() {
-		return teleSzolgaltatas;
+	public String getTelSzolgaltatas() {
+		return telSzolgaltatas;
 	}
 
-	public void setTeleSzolgaltatas(boolean teleSzolgaltatas) {
-		this.teleSzolgaltatas = teleSzolgaltatas;
+	public void setTelSzolgaltatas(String telSzolgaltatas) {
+		this.telSzolgaltatas = telSzolgaltatas;
 	}
 
 	public SzamlaKivGyakorisag getSzamlaKivGyakorisag() {
@@ -340,5 +340,7 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	public Integer getId() {
 		return id;
 	}
+
+	
 	
 }
