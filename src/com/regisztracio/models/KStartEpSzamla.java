@@ -40,7 +40,7 @@ public class KStartEpSzamla implements Serializable {
 	
 	private String szigSzam;
 	
-	private String szigKHNeve; //Személyi igazolvány kiállító hatóság neve
+	private String szigKHNeve;
 	
 	private String szigKHSzekhelye;
 	
@@ -68,13 +68,6 @@ public class KStartEpSzamla implements Serializable {
 	
 	private boolean teleSzolgaltatas = false;
 
-	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
-	@JoinColumn(name = "lakhely_fk")
-	private AllandoLakhely allandoLakhely;
-	
-	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
-	@JoinColumn(name = "levelezesiCim_fk")
-	private LevelezesiCim lvcBTSZ;
 
 	public String getNevElotag() {
 		return nevElotag;
@@ -252,38 +245,12 @@ public class KStartEpSzamla implements Serializable {
 		this.teleSzolgaltatas = teleSzolgaltatas;
 	}
 
-	public AllandoLakhely getAllandoLakhely() {
-		return allandoLakhely;
-	}
-
-	public void setAllandoLakhely(AllandoLakhely allandoLakhely) {
-		this.allandoLakhely = allandoLakhely;
-	}
-
-	public LevelezesiCim getLvcBTSZ() {
-		return lvcBTSZ;
-	}
-
-	public void setLvcBTSZ(LevelezesiCim lvcBTSZ) {
-		this.lvcBTSZ = lvcBTSZ;
-	}
+	
 
 	public Integer getId() {
 		return id;
 	}
 
-	@Override
-	public String toString() {
-		return "KStartEpSzamla [id=" + id + ", nevElotag=" + nevElotag + ", nevVezetek=" + nevVezetek + ", nevKeresztv="
-				+ nevKeresztv + ", nevUto=" + nevUto + ", nevSzuletesi=" + nevSzuletesi + ", allampolgarsag="
-				+ allampolgarsag + ", adoazonositoJel=" + adoazonositoJel + ", szigSzam=" + szigSzam + ", szigKHNeve="
-				+ szigKHNeve + ", szigKHSzekhelye=" + szigKHSzekhelye + ", lakcimkartya=" + lakcimkartya + ", szulIdo="
-				+ szulIdo + ", szulHely=" + szulHely + ", anyjaCsaladiNeve=" + anyjaCsaladiNeve + ", anyjaUtoNeve="
-				+ anyjaUtoNeve + ", GyermekJogosuktsaga=" + GyermekJogosuktsaga + ", nevelesJellege=" + nevelesJellege
-				+ ", utlevelSzama=" + utlevelSzama + ", jogositvanySzama=" + jogositvanySzama + ", webSzolgaltatas="
-				+ webSzolgaltatas + ", mobilSzolgaltatas=" + mobilSzolgaltatas + ", teleSzolgaltatas=" + teleSzolgaltatas
-				+ ", allandoLakhely=" + allandoLakhely + ", lvcBTSZ=" + lvcBTSZ + "]";
-	}
-	
+
 	
 }

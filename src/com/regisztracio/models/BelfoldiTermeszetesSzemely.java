@@ -3,15 +3,12 @@ package com.regisztracio.models;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Transient;
 
 /**
@@ -41,17 +38,33 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	private String nevUto;
 
-	private String nevSzuletesi;
+	private String nevSzuletesi;	
 
+	private Orszag orszag;
+
+	private Integer iranyitoszam;
+
+	private String helyseg;
+
+	private String utcaHazszam;
+
+	private Orszag lvlOrszag;
+
+	private Integer lvlIranyitoszam;
+
+	private String lvlHelyseg;
+
+	private String lvlUtcaHazszam;
+	
 	@Enumerated(EnumType.STRING)
 	private Allampolgarsag allampolgarsag;
-
+	
 	private Integer adoazonositoJel;
 
 	private String szigSzam;
 
-	private String szigKHNeve; // Személyi igazolvány kiállító hatóság neve
-
+	private String szigKHNeve; 
+	
 	private String szigKHSzekhelye;
 
 	private String lakcimkartya;
@@ -68,6 +81,8 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	private boolean webSzolgaltatas = false;
 
+	private boolean mobilSzolgaltatas = false;
+
 	private boolean teleSzolgaltatas = false;
 
 	@Enumerated(EnumType.STRING)
@@ -77,18 +92,6 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalassal;
 
 	private String giroSzamla;
-
-	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
-	@JoinColumn(name = "lakhely_fk")
-	private AllandoLakhely allandoLakhely;
-
-	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.REMOVE })
-	@JoinColumn(name = "levelezesiCim_fk")
-	private LevelezesiCim lvcBTSZ;
-
-	public Integer getId() {
-		return id;
-	}
 
 	public String getNevElotag() {
 		return nevElotag;
@@ -138,12 +141,76 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.allampolgarsag = allampolgarsag;
 	}
 
+	public Orszag getOrszag() {
+		return orszag;
+	}
+
+	public void setOrszag(Orszag orszag) {
+		this.orszag = orszag;
+	}
+
+	public Integer getIranyitoszam() {
+		return iranyitoszam;
+	}
+
+	public void setIranyitoszam(Integer iranyitoszam) {
+		this.iranyitoszam = iranyitoszam;
+	}
+
+	public String getHelyseg() {
+		return helyseg;
+	}
+
+	public void setHelyseg(String helyseg) {
+		this.helyseg = helyseg;
+	}
+
+	public String getUtcaHazszam() {
+		return utcaHazszam;
+	}
+
+	public void setUtcaHazszam(String utcaHazszam) {
+		this.utcaHazszam = utcaHazszam;
+	}
+
 	public Integer getAdoazonositoJel() {
 		return adoazonositoJel;
 	}
 
 	public void setAdoazonositoJel(Integer adoazonositoJel) {
 		this.adoazonositoJel = adoazonositoJel;
+	}
+
+	public Orszag getLvlOrszag() {
+		return lvlOrszag;
+	}
+
+	public void setLvlOrszag(Orszag lvlOrszag) {
+		this.lvlOrszag = lvlOrszag;
+	}
+
+	public Integer getLvlIranyitoszam() {
+		return lvlIranyitoszam;
+	}
+
+	public void setLvlIranyitoszam(Integer lvlIranyitoszam) {
+		this.lvlIranyitoszam = lvlIranyitoszam;
+	}
+
+	public String getLvlHelyseg() {
+		return lvlHelyseg;
+	}
+
+	public void setLvlHelyseg(String lvlHelyseg) {
+		this.lvlHelyseg = lvlHelyseg;
+	}
+
+	public String getLvlUtcaHazszam() {
+		return lvlUtcaHazszam;
+	}
+
+	public void setLvlUtcaHazszam(String lvlUtcaHazszam) {
+		this.lvlUtcaHazszam = lvlUtcaHazszam;
 	}
 
 	public String getSzigSzam() {
@@ -218,7 +285,7 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.jogositvanySzama = jogositvanySzama;
 	}
 
-	public boolean getWebSzolgaltatas() {
+	public boolean isWebSzolgaltatas() {
 		return webSzolgaltatas;
 	}
 
@@ -226,7 +293,15 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.webSzolgaltatas = webSzolgaltatas;
 	}
 
-	public boolean getTeleSzolgaltatas() {
+	public boolean isMobilSzolgaltatas() {
+		return mobilSzolgaltatas;
+	}
+
+	public void setMobilSzolgaltatas(boolean mobilSzolgaltatas) {
+		this.mobilSzolgaltatas = mobilSzolgaltatas;
+	}
+
+	public boolean isTeleSzolgaltatas() {
 		return teleSzolgaltatas;
 	}
 
@@ -258,17 +333,12 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.giroSzamla = giroSzamla;
 	}
 
-	@Override
-	public String toString() {
-		return "BelfoldiTermeszetesSzemely [id=" + id + ", nevElotag=" + nevElotag + ", nevVezetek=" + nevVezetek
-				+ ", nevKeresztv=" + nevKeresztv + ", nevUto=" + nevUto + ", nevSzuletesi=" + nevSzuletesi
-				+ ", allampolgarsag=" + allampolgarsag + ", adoazonositoJel=" + adoazonositoJel + ", szigSzam="
-				+ szigSzam + ", szigKHNeve=" + szigKHNeve + ", szigKHSzekhelye=" + szigKHSzekhelye + ", lakcimkartya="
-				+ lakcimkartya + ", szulIdo=" + szulIdo + ", szulHely=" + szulHely + ", anyjaNeve=" + anyjaNeve
-				+ ", utlevelSzama=" + utlevelSzama + ", jogositvanySzama=" + jogositvanySzama + ", webSzolgaltatas="
-				+ webSzolgaltatas + ", teleSzolgaltatas=" + teleSzolgaltatas + ", szamlaKivGyakorisag="
-				+ szamlaKivGyakorisag + ", esedekessegFizMod=" + esedekessegFizMod + ", giroSzamla=" + giroSzamla
-				+ ", allandoLakhely=" + allandoLakhely + ", lvcBTSZ=" + lvcBTSZ + "]";
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+	
 }

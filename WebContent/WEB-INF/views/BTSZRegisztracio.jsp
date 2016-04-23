@@ -368,9 +368,9 @@
 								<!-- Panel5 row1 -->
 
 								<div class="row featurette">
-									<p>Szeretne-e Web szolgáltatást igényelni?*</p>
+									<p>Szeretne-e Mobil szolgáltatást igényelni?*</p>
 									<div class="input-group">
-										<input name="webSzolgaltatas2Id" type="text"
+										<input name="mobilSzolgaltatasId" type="text"
 											class="form-control" placeholder=""
 											aria-describedby="basic-addon1">
 									</div>

@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.regisztracio.models.Allampolgarsag;
 import com.regisztracio.models.BelfoldiTermeszetesSzemely;
 import com.regisztracio.models.EsedekessegFizMod;
+import com.regisztracio.models.Orszag;
 import com.regisztracio.models.SzamlaKivGyakorisag;
 import com.regisztracio.service.TermeszetesService;
 
@@ -57,7 +58,7 @@ public class SaveBTSZ extends HttpServlet {
 		String szuletesiNev = request.getParameter("szuletesiNevId");
 		
 		String orszagok = request.getParameter("orszagokId");
-		String iranyitoszam = request.getParameter("iranyitoszamId");
+		Integer iranyitoszam = Integer.parseInt(request.getParameter("iranyitoszamId"));
 		String helyseg = request.getParameter("helysegId");
 		String utcaHazszam = request.getParameter("utcaHazszamId");
 		
@@ -87,7 +88,7 @@ public class SaveBTSZ extends HttpServlet {
 		String jogositvanySzama = request.getParameter("jogositvanySzamaId");
 		
 		Boolean webSzolgaltatas = Boolean.valueOf(request.getParameter("webSzolgaltatasId"));
-		String webSzolgaltatas2 = request.getParameter("webSzolgaltatas2Id");
+		String mobilSzolgaltatas = request.getParameter("mobilSzolgaltatasId");
 		Boolean teleSzolgaltatas = Boolean.valueOf(request.getParameter("teleSzolgaltatasId"));
 		
 		String szlaGyakorisag = request.getParameter("szlaGyakorisagId");
@@ -103,7 +104,14 @@ public class SaveBTSZ extends HttpServlet {
 		btsz.setNevKeresztv(vezetekNev);
 		btsz.setNevVezetek(keresztNev);
 		btsz.setNevUto(masodikUtonev);
-		btsz.setNevSzuletesi(szuletesiNev);		
+		btsz.setNevSzuletesi(szuletesiNev);
+		btsz.setOrszag(Orszag.valueOf(orszagok));
+		btsz.setIranyitoszam(iranyitoszam);
+		btsz.setHelyseg(helyseg);
+		btsz.setUtcaHazszam(utcaHazszam);
+		btsz.setLvlOrszag(Orszag.valueOf(lvlOrszagok));
+		
+		
 		btsz.setAllampolgarsag(Allampolgarsag.valueOf(allampolgarsagok));
 		btsz.setAdoazonositoJel(adoazonositoJel);
 		btsz.setSzigSzam(szigSz);
@@ -116,10 +124,13 @@ public class SaveBTSZ extends HttpServlet {
 		btsz.setUtlevelSzama(utlevelSzama);
 		btsz.setJogositvanySzama(jogositvanySzama);
 		btsz.setWebSzolgaltatas(webSzolgaltatas);
-		btsz.setTeleSzolgaltatas(teleSzolgaltatas);
+//		btsz.setMobilSzolgaltatas(mobilSzolgaltatas);
+		btsz.setTeleSzolgaltatas(teleSzolgaltatas);		
 		btsz.setSzamlaKivGyakorisag(SzamlaKivGyakorisag.valueOf(szlaGyakorisag));
 		btsz.setEsedekessegFizMod(EsedekessegFizMod.valueOf(esedekesseg));
 		btsz.setGiroSzamla(giroSzamlaId);
+		
+	
 		
 		
 		

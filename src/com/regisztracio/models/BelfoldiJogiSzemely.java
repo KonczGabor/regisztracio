@@ -52,9 +52,7 @@ public class BelfoldiJogiSzemely implements Serializable {
 	
 	private String giroSzamla;
 	
-	@ManyToOne
-	@JoinColumn(name = "szekhely_fk")
-	private Szekhely szekhely;
+
 
 	public String getJogiSzemelyNeve() {
 		return jogiSzemelyNeve;
@@ -168,27 +166,6 @@ public class BelfoldiJogiSzemely implements Serializable {
 		this.giroSzamla = giroSzamla;
 	}
 
-	public Szekhely getSzekhely() {
-		return szekhely;
-	}
 
-	public void setSzekhely(Szekhely szekhely) {
-		this.szekhely = szekhely;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	@Override
-	public String toString() {
-		return "BelfoldiJogiSzemely [id=" + id + ", jogiSzemelyNeve=" + jogiSzemelyNeve + ", adoszam=" + adoszam
-				+ ", telephely=" + telephely + ", alapitoOkiratSzama=" + alapitoOkiratSzama + ", tSzKelte=" + tSzKelte
-				+ ", alapitokTulajdonosok=" + alapitokTulajdonosok + ", cegBejKelte=" + cegBejKelte + ", egyStatSzam="
-				+ egyStatSzam + ", webSzolgaltatas=" + webSzolgaltatas + ", mobilSzolgaltatas=" + mobilSzolgaltatas + ", teleSzolgaltatas="
-				+ teleSzolgaltatas + ", szamlaKivGyakorisag=" + szamlaKivGyakorisag + ", esedekessegFizMod="
-				+ esedekessegFizMod + ", giroSzamla=" + giroSzamla + ", szekhely=" + szekhely + "]";
-	}
-	
 	
 }
