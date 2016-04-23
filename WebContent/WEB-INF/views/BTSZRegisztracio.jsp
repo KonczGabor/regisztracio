@@ -1,4 +1,4 @@
-<%@ page pageEncoding="UTF-8" %>
+<%@ page pageEncoding="UTF-8"%>
 
 <html>
 <head>
@@ -22,7 +22,7 @@
 						<div class="col-md-4">
 							<p>Név - előtag</p>
 							<div class="input-group">
-								<input required name="elotagId" type="text" class="form-control"
+								<input name="elotagId" type="text" class="form-control"
 									placeholder="" aria-describedby="basic-addon1">
 							</div>
 						</div>
@@ -36,7 +36,7 @@
 							<label for="vezetekNevId">Név - vezetéknév*</label>
 							<div class="input-group">
 								<input name="vezetekNevId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1">
+									placeholder="" aria-describedby="basic-addon1"  pattern="[A-Z]+[a-z]*"  title="Nagy kezdőbetűvel kell kezdődnie, számot és különleges írásjelet nem tartalmazhat!" >
 							</div>
 						</div>
 
@@ -44,15 +44,15 @@
 							<p>Név - első utóneve*</p>
 							<div class="input-group">
 								<input name="keresztNevId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1">
+									placeholder="" aria-describedby="basic-addon1" pattern="[A-Z]+[a-z]*"  title="Nagy kezdőbetűvel kell kezdődnie, számot és különleges írásjelet nem tartalmazhat!">
 							</div>
 						</div>
 
 						<div class="col-md-4">
 							<p>Név - második utóneve</p>
 							<div class="input-group">
-								<input name="masodikUtonevId" type="text" class="form-control" placeholder=""
-									aria-describedby="basic-addon1">
+								<input name="masodikUtonevId" type="text" class="form-control"
+									placeholder="" aria-describedby="basic-addon1">
 							</div>
 						</div>
 					</div>
@@ -109,7 +109,7 @@
 									<p>Irányítószám*</p>
 									<div class="input-group">
 										<input name="iranyitoszamId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1">
+											placeholder="" aria-describedby="basic-addon1" pattern="[0-9]+"  title=" Csak számot tartalmazhat!">
 									</div>
 								</div>
 								<!-- Panel2 row2 -->
@@ -358,12 +358,19 @@
 							<div class="ContainerSajat">
 								<div class="row featurette">
 									<p>Szeretne-e Web szolgáltatást igényelni?*</p>
-									<div class="form-group">
-										<select class="form-control" name="webSzolgaltatasId">
-											<option value="Igen">Igen</option>
-											<option value="Nem">Nem</option>
-										</select>
+									<label for="chkYes"> <input type="radio" id="chkYes"
+										name="chkEmail" onclick="ShowHideDiv()" /> Igen
+									</label> <label for="chkNo"> <input type="radio" id="chkNo"
+										name="chkEmail" onclick="ShowHideDiv()" checked="checked"/> Nem
+									</label>
+									<div id="emailArea" style="display: none">
+										<div class="input-group">
+											<input name="emailCim" id=emailInput type="text"
+												class="form-control" placeholder="myaddress@provider.com"
+												aria-describedby="basic-addon1" >
+										</div>
 									</div>
+									<hr />
 								</div>
 								<!-- Panel5 row1 -->
 
@@ -499,6 +506,7 @@
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 		crossorigin="anonymous"></script>
 
+	<script src="resources/js/RadioButton.js"></script>
 
 </body>
 </html>
