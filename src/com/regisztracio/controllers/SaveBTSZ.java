@@ -77,9 +77,15 @@ public class SaveBTSZ extends HttpServlet {
 		String szuletesiIdo_raw = request.getParameter("szuletesiIdoId");		
 		String[] szuletesiIdoArr = szuletesiIdo_raw.split("\\/");
 		Calendar cal = Calendar.getInstance();
-		cal.set(Calendar.YEAR, Integer.parseInt(szuletesiIdoArr[2]));
-		cal.set(Calendar.MONTH, Integer.parseInt(szuletesiIdoArr[0])-1);  //tomb
-		cal.set(Calendar.DAY_OF_MONTH, Integer.parseInt(szuletesiIdoArr[1]));
+		cal.clear(Calendar.HOUR_OF_DAY); //set to 01:00:00 -Unnecessary but representative
+		cal.clear(Calendar.AM_PM);
+		cal.clear(Calendar.MINUTE);
+		cal.clear(Calendar.SECOND);
+		cal.clear(Calendar.MILLISECOND);
+		cal.set(Calendar.HOUR_OF_DAY, 0); //set to 00:00:00
+		cal.set(Calendar.YEAR, Integer.parseInt(szuletesiIdoArr[0]));
+		cal.set(Calendar.MONTH, Integer.parseInt(szuletesiIdoArr[1])-1);  //tomb
+		cal.set(Calendar.DAY_OF_MONTH, Integer.parseInt(szuletesiIdoArr[2]));
 		Date szuletesiIdo = cal.getTime();		
 		
 		String szuletesiHely = request.getParameter("szuletesiHelyId");

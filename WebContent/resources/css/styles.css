@@ -1,4 +1,4 @@
-@CHARSET "UTF-8";
+/* @CHARSET "UTF-8"; */
 
 .ContainerSajat {
 	padding-right: 15px;
@@ -6,3 +6,16 @@
 	margin-right: auto;
 	margin-left: auto;
 }
+
+/* background:	linear-gradient (rgba(196, 102, 0, 0.6), rgba(155, 89, 182,	0.6)); */
+
+.progress-wrap {
+  text-align: center;
+  font-size: 10px;
+  color: red;
+  margin: 0 0 20px 0;
+  progress {
+    width: 100%;
+    margin: 0 0 5px 0;
+  }
+}	

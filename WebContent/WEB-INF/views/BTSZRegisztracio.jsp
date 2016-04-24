@@ -33,10 +33,12 @@
 
 					<div class="row featurette">
 						<div class="col-md-4">
-							<label for="vezetekNevId">Név - vezetéknév*</label>
+							<p for="vezetekNevId">Név - vezetéknév*</p>
 							<div class="input-group">
 								<input name="vezetekNevId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1">
+									placeholder="" aria-describedby="basic-addon1" required
+									pattern="[A-Z]+[a-z]*"
+									title="Nagy kezdőbetűvel kell kezdődnie, számot és különleges írásjelet nem tartalmazhat!">
 							</div>
 						</div>
 
@@ -44,7 +46,9 @@
 							<p>Név - első utóneve*</p>
 							<div class="input-group">
 								<input name="keresztNevId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1">
+									placeholder="" aria-describedby="basic-addon1" required
+									pattern="[A-Z]+[a-z]*"
+									title="Nagy kezdőbetűvel kell kezdődnie, számot és különleges írásjelet nem tartalmazhat!">
 							</div>
 						</div>
 
@@ -94,12 +98,11 @@
 									<p>Ország*</p>
 									<div class="form-group">
 										<select class="form-control" name="orszagokId">
-											<option value="Dunaujvaros">Dunaujvaros</option>
-											<option value="Budapest">Budapest</option>
-											<option value="Szeged">Szeged</option>
-											<option value="Pecs">Pecs</option>
-											<option value="Gyor">Gyor</option>
-											<option value="Debrecen">Debrecen</option>
+											<option value="Magyarorszag">Magyarország</option>
+											<option value="Kina">Kína</option>
+											<option value="Nemetoszág">Németoszág</option>
+											<option value="Japan">Japán</option>
+											<option value="Ausztralia">Ausztrália</option>
 										</select>
 									</div>
 								</div>
@@ -109,7 +112,8 @@
 									<p>Irányítószám*</p>
 									<div class="input-group">
 										<input name="iranyitoszamId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1">
+											placeholder="1234" aria-describedby="basic-addon1" required
+											pattern="\d{4}" title="Négy darab számjegy">
 									</div>
 								</div>
 								<!-- Panel2 row2 -->
@@ -118,7 +122,9 @@
 									<p>Helység*</p>
 									<div class="input-group">
 										<input name="helysegId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1">
+											placeholder="" aria-describedby="basic-addon1" required
+											pattern="[A-Z]+[a-z]*"
+											title="Nagy kezdőbetűvel kell kezdődnie, számot és különleges írásjelet nem tartalmazhat!">
 									</div>
 								</div>
 								<!-- Panel2 row3 -->
@@ -127,7 +133,7 @@
 									<p>Utca házszám*</p>
 									<div class="input-group">
 										<input name="utcaHazszamId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1">
+											placeholder="" aria-describedby="basic-addon1" required>
 									</div>
 								</div>
 								<!-- Panel2 row4 -->
@@ -158,12 +164,11 @@
 									<p>Ország</p>
 									<div class="form-group">
 										<select class="form-control" name="lvlOrszagokId">
-											<option value="Dunaujvaros">Dunaujvaros</option>
-											<option value="Budapest">Budapest</option>
-											<option value="Szeged">Szeged</option>
-											<option value="Pecs">Pecs</option>
-											<option value="Gyor">Gyor</option>
-											<option value="Debrecen">Debrecen</option>
+											<option value="Magyarorszag">Magyarország</option>
+											<option value="Kina">Kína</option>
+											<option value="Nemetoszág">Németoszág</option>
+											<option value="Japan">Japán</option>
+											<option value="Ausztralia">Ausztrália</option>
 										</select>
 									</div>
 								</div>
@@ -173,8 +178,8 @@
 									<p>Levelezési cím - irányítószám</p>
 									<div class="input-group">
 										<input name="lvlIranyitoszamId" type="text"
-											class="form-control" placeholder=""
-											aria-describedby="basic-addon1">
+											class="form-control" placeholder="1234"
+											aria-describedby="basic-addon1" pattern="\d{4}" title="Négy darab számjegy">
 									</div>
 								</div>
 								<!-- Panel3 row2 -->
@@ -229,12 +234,8 @@
 									<p>Állampolgárság*</p>
 									<div class="form-group">
 										<select class="form-control" name="allampolgarsagokId">
-											<option value="Dunaujvaros">Dunaujvaros</option>
-											<option value="Budapest">Budapest</option>
-											<option value="Szeged">Szeged</option>
-											<option value="Pecs">Pecs</option>
-											<option value="Gyor">Gyor</option>
-											<option value="Debrecen">Debrecen</option>
+											<option value="magyar">magyar</option>
+											
 										</select>
 									</div>
 								</div>
@@ -244,8 +245,9 @@
 									<p>Adóazonosító jel*</p>
 									<div class="input-group">
 										<input name="adoazonositoJelId" type="text"
-											class="form-control" placeholder=""
-											aria-describedby="basic-addon1">
+											class="form-control" placeholder="12345678"
+											aria-describedby="basic-addon1" required
+											pattern="\d{8}" title="Nyolc darab számjegy">
 									</div>
 								</div>
 								<!-- Panel4 row2 -->
@@ -291,7 +293,8 @@
 									<p>Születési idő*</p>
 									<div class="input-group">
 										<input name="szuletesiIdoId" type="text" class="form-control"
-											placeholder="/Hó/Nap/Év" aria-describedby="basic-addon1">
+											placeholder="Év/Hó/Nap/" aria-describedby="basic-addon1" required
+											pattern="^(19[0-9][0-9]|20[0-9][0-9])\/(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])$" title="Négy darab számjegy">
 									</div>
 								</div>
 								<!-- Panel4 row7 -->
@@ -381,9 +384,9 @@
 									<label for="chkYesMobil"> <input type="radio"
 										id="chkYesMobil" name="chkMobil" onclick="ShowHideDivMobil()" />
 										Igen
-									</label> <label for="chkNo"> <input type="radio" id="chkNoMobil"
-										name="chkMobil" onclick="ShowHideDivMobil()" checked="checked" />
-										Nem
+									</label> <label for="chkNo"> <input type="radio"
+										id="chkNoMobil" name="chkMobil" onclick="ShowHideDivMobil()"
+										checked="checked" /> Nem
 									</label>
 									<div id="mobilArea" style="display: none">
 										<div class="input-group">
@@ -456,7 +459,7 @@
 									<p>Giro számlaszám utalásos esedékességfizetési rendelkezés
 										esetén*</p>
 									<div class="input-group">
-										<input name="giroSzamlaIdId" type="text" class="form-control"
+										<input name="giroSzamlaId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1">
 									</div>
 								</div>
@@ -527,6 +530,7 @@
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
 		crossorigin="anonymous"></script>
 
+	<!-- My own radio button displayer js -->
 	<script src="resources/js/RadioButton.js"></script>
 
 </body>
