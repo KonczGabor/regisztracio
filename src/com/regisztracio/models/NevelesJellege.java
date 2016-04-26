@@ -1,5 +1,5 @@
 package com.regisztracio.models;
 
 public enum NevelesJellege {
-	SzÃ¼lÅ‘, ÃtmenetiNevelÃ©sbeVett, TartÃ³sNevelÃ©sbeVett
+	Szülõ, ÁtmenetiNevelésbeVett, TartósNevelésbeVett
 }

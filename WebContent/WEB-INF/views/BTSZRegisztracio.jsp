@@ -1,29 +1,99 @@
-<%@ page pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-2"
+	pageEncoding="ISO-8859-2"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Term√©szetesSzem√©ly</title>
+<title>TermÈszetesSzemÈly</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Bootstrap core CSS -->
+<link
+	href="resources/Carousel Template for Bootstrap_files/bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link
+	href="resources/Carousel Template for Bootstrap_files/ie10-viewport-bug-workaround.css"
+	rel="stylesheet">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+	crossorigin="anonymous">
+
+
+
+<!-- Custom styles for this template -->
+<link
+	href="resources/Carousel Template for Bootstrap_files/carousel.css"
+	rel="stylesheet">
+
+
 <link rel="stylesheet" href="resources/css/styles.css" />
+<link rel="stylesheet" href="resources/css/navbar.css" />
+<link rel="stylesheet" href="resources/css/regisztracio.css" />
 </head>
 <body>
-	<form method="POST" action="SaveBTSZ">
+
+	<header>
+	<div role="navigation" class="navbar navbar-fixed-top">
+		<a href="index.html" class="navbar-brand navbar-brand-logo">
+			<div class="logo">
+				<img src="resources/img/logo.png" />
+			</div>
+			<div class="brand">Profit Bank</div>
+		</a>
+		<button data-toggle="collapse" data-target=".navHeaderCollapse"
+			class="navbar-toggle">
+			<span class="icon-bar"></span><span class="icon-bar"></span><span
+				class="icon-bar"></span>
+		</button>
+		<div class="collapse navbar-collapse navHeaderCollapse">
+			<ul id="top-menu" class="nav navbar-nav navbar-right">
+
+				<li><div class="progress-wrap, progressbar">
+						<progress max="100" value="0" id="progress"></progress>
+						<div class="progress-message" id="progress-message">KÈrem tˆltse ki a kˆtelezı,*-al jelˆlt mezıket!</div>
+					</div></li>
+				<li><a href="utas_regisztracio"><span
+						class="glyphicon glyphicon-briefcase"></span>
+						<p>Utas Regisztr·cÛ</p></a></li>
+				<li><a href="pilota_regisztracio"><span
+						class="glyphicon glyphicon-sunglasses"></span>
+						<p>Pilota Regisztracio</p></a></li>
+			</ul>
+		</div>
+	</div>
+	</header>
+
+	<form method="POST" action="SaveBTSZ" class="pro-form" id="pro-form">
 
 		<div class="container marketing">
+		
+			<h1>Belfˆldi TermÈszetes szemÈly</h1>
+			<br> <br>
 
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">N√©v</h3>
+					<h3 class="panel-title">NÈv</h3>
 				</div>
 				<div class="panel-body">
 
 					<div class="row featurette">
 						<div class="col-md-4">
-							<p>N√©v - el≈ëtag</p>
+							<p>NÈv - elıtag</p>
 							<div class="input-group">
 								<input name="elotagId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1">
+									placeholder="" aria-describedby="basic-addon1"
+									pattern="[A-Za-z]*">
 							</div>
 						</div>
 						<div class="col-md-4"></div>
@@ -33,30 +103,31 @@
 
 					<div class="row featurette">
 						<div class="col-md-4">
-							<p for="vezetekNevId">N√©v - vezet√©kn√©v*</p>
+							<p for="vezetekNevId">NÈv - vezetÈknÈv*</p>
 							<div class="input-group">
 								<input name="vezetekNevId" type="text" class="form-control"
 									placeholder="" aria-describedby="basic-addon1" required
-									pattern="[A-Z]+[a-z]*"
-									title="Nagy kezd≈ëbet≈±vel kell kezd≈ëdnie, sz√°mot √©s k√ºl√∂nleges √≠r√°sjelet nem tartalmazhat!">
+									pattern="^[A-Z¡…Õ”÷’⁄‹€][a-z·ÈÌÛˆı˙¸˚]*$"
+									title="Nagy kezdıbet˚vel kell kezdıdnie, sz·mot Ès k¸lˆnleges Ìr·sjelet nem tartalmazhat!">
 							</div>
 						</div>
 
 						<div class="col-md-4">
-							<p>N√©v - els≈ë ut√≥neve*</p>
+							<p>NÈv - elsı utÛneve*</p>
 							<div class="input-group">
 								<input name="keresztNevId" type="text" class="form-control"
 									placeholder="" aria-describedby="basic-addon1" required
-									pattern="[A-Z]+[a-z]*"
-									title="Nagy kezd≈ëbet≈±vel kell kezd≈ëdnie, sz√°mot √©s k√ºl√∂nleges √≠r√°sjelet nem tartalmazhat!">
+									pattern="^[A-Z¡…Õ”÷’⁄‹€][a-z·ÈÌÛˆı˙¸˚]*$"
+									title="Nagy kezdıbet˚vel kell kezdıdnie, sz·mot Ès k¸lˆnleges Ìr·sjelet nem tartalmazhat!">
 							</div>
 						</div>
 
 						<div class="col-md-4">
-							<p>N√©v - m√°sodik ut√≥neve</p>
+							<p>NÈv - m·sodik utÛneve</p>
 							<div class="input-group">
 								<input name="masodikUtonevId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1">
+									placeholder="" aria-describedby="basic-addon1"
+									pattern="^[A-Z¡…Õ”÷’⁄‹€][a-z·ÈÌÛˆı˙¸˚]*$*">
 							</div>
 						</div>
 					</div>
@@ -65,10 +136,11 @@
 
 					<div class="row featurette">
 						<div class="col-md-4">
-							<p>Le√°nykori / Sz√ºlet√©si n√©v</p>
+							<p>Le·nykori / Sz¸letÈsi nÈv</p>
 							<div class="input-group">
 								<input name="szuletesiNevId" type="text" class="form-control"
-									placeholder="" aria-describedby="basic-addon1">
+									placeholder="" aria-describedby="basic-addon1"
+									pattern="[A-Z]+[a-z]*">
 							</div>
 						</div>
 						<div class="col-md-4"></div>
@@ -88,49 +160,49 @@
 
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">√Ålland√≥ lakhely c√≠me</h3>
+							<h3 class="panel-title">¡llandÛ lakhely cÌme</h3>
 						</div>
 						<div class="panel-body">
 
 							<div class="ContainerSajat">
 
 								<div class="row featurette">
-									<p>Orsz√°g*</p>
+									<p>Orsz·g</p>
 									<div class="form-group">
 										<select class="form-control" name="orszagokId">
-											<option value="Magyarorszag">Magyarorsz√°g</option>
-											<option value="Kina">K√≠na</option>
-											<option value="Nemetosz√°g">N√©metosz√°g</option>
-											<option value="Japan">Jap√°n</option>
-											<option value="Ausztralia">Ausztr√°lia</option>
+											<option value="Magyarorsz·g">Magyarorsz·g</option>
+											<option value="KÌna">KÌna</option>
+											<option value="NÈmetorsz·g">NÈmetorsz·g</option>
+											<option value="Jap·n">Jap·n</option>
+											<option value="Ausztr·lia">Ausztr·lia</option>
 										</select>
 									</div>
 								</div>
 								<!-- Panel2 row1 -->
 
 								<div class="row featurette">
-									<p>Ir√°ny√≠t√≥sz√°m*</p>
+									<p>Ir·nyÌtÛsz·m*</p>
 									<div class="input-group">
 										<input name="iranyitoszamId" type="text" class="form-control"
 											placeholder="1234" aria-describedby="basic-addon1" required
-											pattern="\d{4}" title="N√©gy darab sz√°mjegy">
+											pattern="\d{4}" title="NÈgy darab sz·mjegy">
 									</div>
 								</div>
 								<!-- Panel2 row2 -->
 
 								<div class="row featurette">
-									<p>Helys√©g*</p>
+									<p>HelysÈg*</p>
 									<div class="input-group">
 										<input name="helysegId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1" required
 											pattern="[A-Z]+[a-z]*"
-											title="Nagy kezd≈ëbet≈±vel kell kezd≈ëdnie, sz√°mot √©s k√ºl√∂nleges √≠r√°sjelet nem tartalmazhat!">
+											title="Nagy kezdıbet˚vel kell kezdıdnie, sz·mot Ès k¸lˆnleges Ìr·sjelet nem tartalmazhat!">
 									</div>
 								</div>
 								<!-- Panel2 row3 -->
 
 								<div class="row featurette">
-									<p>Utca h√°zsz√°m*</p>
+									<p>Utca h·zsz·m*</p>
 									<div class="input-group">
 										<input name="utcaHazszamId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1" required>
@@ -139,7 +211,7 @@
 								<!-- Panel2 row4 -->
 
 							</div>
-							<!--ContainerSajat Panel2 bels≈ë-->
+							<!--ContainerSajat Panel2 belsı-->
 
 						</div>
 						<!-- Panel2 - body -->
@@ -153,39 +225,40 @@
 
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">Levelez√©si c√≠m (amennyiben a
-								lakhelyt≈ël elt√©r≈ë)</h3>
+							<h3 class="panel-title">LevelezÈsi cÌm (amennyiben a
+								lakhelytıl eltÈrı)</h3>
 						</div>
 						<div class="panel-body">
 
 							<div class="ContainerSajat">
 
 								<div class="row featurette">
-									<p>Orsz√°g</p>
+									<p>Orsz·g</p>
 									<div class="form-group">
 										<select class="form-control" name="lvlOrszagokId">
-											<option value="Magyarorszag">Magyarorsz√°g</option>
-											<option value="Kina">K√≠na</option>
-											<option value="Nemetosz√°g">N√©metosz√°g</option>
-											<option value="Japan">Jap√°n</option>
-											<option value="Ausztralia">Ausztr√°lia</option>
+											<option value="Magyarorsz·g">Magyarorsz·g</option>
+											<option value="KÌna">KÌna</option>
+											<option value="NÈmetorsz·g">NÈmetorsz·g</option>
+											<option value="Jap·n">Jap·n</option>
+											<option value="Ausztr·lia">Ausztr·lia</option>
 										</select>
 									</div>
 								</div>
 								<!-- Panel3 row1 -->
 
 								<div class="row featurette">
-									<p>Levelez√©si c√≠m - ir√°ny√≠t√≥sz√°m</p>
+									<p>LevelezÈsi cÌm - ir·nyÌtÛsz·m</p>
 									<div class="input-group">
 										<input name="lvlIranyitoszamId" type="text"
 											class="form-control" placeholder="1234"
-											aria-describedby="basic-addon1" pattern="\d{4}" title="N√©gy darab sz√°mjegy">
+											aria-describedby="basic-addon1" pattern="\d{4}"
+											title="NÈgy darab sz·mjegy">
 									</div>
 								</div>
 								<!-- Panel3 row2 -->
 
 								<div class="row featurette">
-									<p>Levelez√©si c√≠m - helys√©g</p>
+									<p>LevelezÈsi cÌm - helysÈg</p>
 									<div class="input-group">
 										<input name="lvlHelysegId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1">
@@ -194,7 +267,7 @@
 								<!-- Panel3 row3 -->
 
 								<div class="row featurette">
-									<p>Levelez√©si c√≠m - utca h√°zsz√°m</p>
+									<p>LevelezÈsi cÌm - utca h·zsz·m</p>
 									<div class="input-group">
 										<input name="lvlUtcaHazszamId" type="text"
 											class="form-control" placeholder=""
@@ -204,7 +277,7 @@
 								<!-- Panel3 row4 -->
 
 							</div>
-							<!--ContainerSajat Panel3 bels≈ë-->
+							<!--ContainerSajat Panel3 belsı-->
 
 						</div>
 						<!-- Panel3 - body -->
@@ -224,36 +297,40 @@
 
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">Szem√©lyes adatok</h3>
+							<h3 class="panel-title">SzemÈlyes adatok</h3>
 						</div>
 						<div class="panel-body">
 
 							<div class="ContainerSajat">
 
 								<div class="row featurette">
-									<p>√Ållampolg√°rs√°g*</p>
+									<p>¡llampolg·rs·g*</p>
 									<div class="form-group">
 										<select class="form-control" name="allampolgarsagokId">
 											<option value="magyar">magyar</option>
-											
+											<option value="kÌnai">kÌnai</option>
+											<option value="nÈmet">nÈmet</option>
+											<option value="jap·n">jap·n</option>
+											<option value="ausztr·l">ausztr·l</option>
+
 										</select>
 									</div>
 								</div>
 								<!-- Panel4 row1 -->
 
 								<div class="row featurette">
-									<p>Ad√≥azonos√≠t√≥ jel*</p>
+									<p>AdÛazonosÌtÛ jel*</p>
 									<div class="input-group">
 										<input name="adoazonositoJelId" type="text"
 											class="form-control" placeholder="12345678"
-											aria-describedby="basic-addon1" required
-											pattern="\d{8}" title="Nyolc darab sz√°mjegy">
+											aria-describedby="basic-addon1" required pattern="\d{8}"
+											title="Nyolc darab sz·mjegy">
 									</div>
 								</div>
 								<!-- Panel4 row2 -->
 
 								<div class="row featurette">
-									<p>Szem√©lyi igazolv√°ny sz√°ma</p>
+									<p>SzemÈlyi igazolv·ny sz·ma</p>
 									<div class="input-group">
 										<input name="szigSzId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1">
@@ -262,7 +339,7 @@
 								<!-- Panel4 row3 -->
 
 								<div class="row featurette">
-									<p>Szig. ki√°ll√≠t√≥ hat√≥s√°g neve</p>
+									<p>Szig. ki·llÌtÛ hatÛs·g neve</p>
 									<div class="input-group">
 										<input name="szigKiHatNeveId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1">
@@ -271,7 +348,7 @@
 								<!-- Panel4 row4 -->
 
 								<div class="row featurette">
-									<p>Szig. ki√°ll√≠t√≥ hat√≥s√°g sz√©khelye</p>
+									<p>Szig. ki·llÌtÛ hatÛs·g szÈkhelye</p>
 									<div class="input-group">
 										<input name="szigKiHatSzekhelyeId" type="text"
 											class="form-control" placeholder=""
@@ -281,7 +358,7 @@
 								<!-- Panel4 row5 -->
 
 								<div class="row featurette">
-									<p>Lakc√≠mk√°rtya sz√°ma</p>
+									<p>LakcÌmk·rtya sz·ma</p>
 									<div class="input-group">
 										<input name="lakcimKSzamaId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1">
@@ -290,20 +367,23 @@
 								<!-- Panel4 row6 -->
 
 								<div class="row featurette">
-									<p>Sz√ºlet√©si id≈ë*</p>
+									<p>Sz¸letÈsi idı*</p>
 									<div class="input-group">
 										<input name="szuletesiIdoId" type="text" class="form-control"
-											placeholder="√âv/H√≥/Nap/" aria-describedby="basic-addon1" required
-											pattern="^(19[0-9][0-9]|20[0-9][0-9])\/(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])$" title="N√©gy darab sz√°mjegy">
+											placeholder="…v/HÛ/Nap/" aria-describedby="basic-addon1"
+											required
+											pattern="^(19[0-9][0-9]|20[0-9][0-9])\/(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])$"
+											title="NÈgy darab sz·mjegy">
 									</div>
 								</div>
 								<!-- Panel4 row7 -->
 
 								<div class="row featurette">
-									<p>Sz√ºlet√©si hely*</p>
+									<p>Sz¸letÈsi hely*</p>
 									<div class="input-group">
 										<input name="szuletesiHelyId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1">
+											placeholder="" aria-describedby="basic-addon1" required
+											pattern="^[A-Z¡…Õ”÷’⁄‹€][a-z·ÈÌÛˆı˙¸˚]*$">
 									</div>
 								</div>
 								<!-- Panel4 row7 -->
@@ -312,13 +392,14 @@
 									<p>Anyja neve*</p>
 									<div class="input-group">
 										<input name="anyjaNeveId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1">
+											placeholder="" aria-describedby="basic-addon1" required
+											pattern="^[A-Z¡…Õ”÷’⁄‹€][a-z·ÈÌÛˆı˙¸˚]*\ [A-Z¡…Õ”÷’⁄‹€][a-z·ÈÌÛˆı˙¸˚]*$">
 									</div>
 								</div>
 								<!-- Panel4 row9 -->
 
 								<div class="row featurette">
-									<p>√ötlev√©l sz√°ma</p>
+									<p>⁄tlevÈl sz·ma</p>
 									<div class="input-group">
 										<input name="utlevelSzamaId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1">
@@ -327,7 +408,7 @@
 								<!-- Panel4 row10 -->
 
 								<div class="row featurette">
-									<p>Jogos√≠tv√°ny sz√°ma</p>
+									<p>JogosÌtv·ny sz·ma</p>
 									<div class="input-group">
 										<input name="jogositvanySzamaId" type="text"
 											class="form-control" placeholder=""
@@ -339,7 +420,7 @@
 
 
 							</div>
-							<!--ContainerSajat Panel4 bels≈ë-->
+							<!--ContainerSajat Panel4 belsı-->
 
 						</div>
 						<!-- Panel4 - body -->
@@ -354,13 +435,13 @@
 
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">Elektronikus szolg√°ltat√°sokkal
+							<h3 class="panel-title">Elektronikus szolg·ltat·sokkal
 								kapcsolatos adatok</h3>
 						</div>
 						<div class="panel-body">
 							<div class="ContainerSajat">
 								<div class="row featurette">
-									<p>Szeretne-e Web szolg√°ltat√°st ig√©nyelni?*</p>
+									<p>Szeretne-e Web szolg·ltat·st igÈnyelni?</p>
 									<label for="chkYesWeb"> <input type="radio"
 										id="chkYesWeb" name="chkWeb" onclick="ShowHideDivWeb()" />
 										Igen
@@ -380,7 +461,7 @@
 								<!-- Panel5 row1 -->
 
 								<div class="row featurette">
-									<p>Szeretne-e Mobil szolg√°ltat√°st ig√©nyelni?*</p>
+									<p>Szeretne-e Mobil szolg·ltat·st igÈnyelni?</p>
 									<label for="chkYesMobil"> <input type="radio"
 										id="chkYesMobil" name="chkMobil" onclick="ShowHideDivMobil()" />
 										Igen
@@ -400,7 +481,7 @@
 								<!-- Panel4 row2 -->
 
 								<div class="row featurette">
-									<p>Szeretne-e Telefonos szolg√°ltat√°st ig√©nyelni?*</p>
+									<p>Szeretne-e Telefonos szolg·ltat·st igÈnyelni?</p>
 									<label for="chkYesTel"> <input type="radio"
 										id="chkYesTel" name="chkTel" onclick="ShowHideDivTel()" />
 										Igen
@@ -420,7 +501,7 @@
 								<!-- Panel5 row3 -->
 
 							</div>
-							<!--ContainerSajat Panel6 bels≈ë-->
+							<!--ContainerSajat Panel6 belsı-->
 
 						</div>
 						<!-- Panel5 - body -->
@@ -429,35 +510,35 @@
 
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">Sz√°ml√°t √©rint≈ë rendelkez√©sek</h3>
+							<h3 class="panel-title">Sz·ml·t Èrintı rendelkezÈsek</h3>
 						</div>
 						<div class="panel-body">
 							<div class="ContainerSajat">
 								<div class="row featurette">
-									<p>Sz√°mlakivonat gyakoris√°ga*</p>
+									<p>Sz·mlakivonat gyakoris·ga</p>
 									<div class="form-group">
 										<select class="form-control" name="szlaGyakorisagId">
-											<option value="Evente">√âvente</option>
-											<option value="NemKer">Nem K√©r</option>
+											<option value="Evente">…vente</option>
+											<option value="NemKer">Nem KÈr</option>
 										</select>
 									</div>
 								</div>
 								<!-- Panel6 row1 -->
 
 								<div class="row featurette">
-									<p>Esed√©kess√©gfizet√©s m√≥dja*</p>
+									<p>EsedÈkessÈgfizetÈs mÛdja</p>
 									<div class="form-group">
 										<select class="form-control" name="esedekessegId">
-											<option value="BankiUtalassal">K√©szp√©nz-sz√°mla</option>
-											<option value="KeszpenzPenzszamla">Banki utal√°ssal</option>
+											<option value="BankiUtalassal">KÈszpÈnz-sz·mla</option>
+											<option value="KeszpenzPenzszamla">Banki utal·ssal</option>
 										</select>
 									</div>
 								</div>
 								<!-- Panel6 row2 -->
 
 								<div class="row featurette">
-									<p>Giro sz√°mlasz√°m utal√°sos esed√©kess√©gfizet√©si rendelkez√©s
-										eset√©n*</p>
+									<p>Giro sz·mlasz·m utal·sos esedÈkessÈgfizetÈsi rendelkezÈs
+										esetÈn</p>
 									<div class="input-group">
 										<input name="giroSzamlaId" type="text" class="form-control"
 											placeholder="" aria-describedby="basic-addon1">
@@ -466,7 +547,7 @@
 								<!-- Panel6 row3 -->
 
 							</div>
-							<!--ContainerSajat Panel6 bels≈ë-->
+							<!--ContainerSajat Panel6 belsı-->
 
 						</div>
 						<!-- Panel6 - body -->
@@ -483,7 +564,7 @@
 			<div class="row featurette">
 				<div class="col-md-6">
 
-					<a href="index.html" class="btn btn-info" role="button">M√©gse</a>
+					<a href="index.html" class="btn btn-info" role="button">MÈgse</a>
 
 				</div>
 				<!-- col-md-6 1 -->
@@ -491,9 +572,7 @@
 				<div class="col-md-6">
 
 					<button type="submit" class="btn btn-primary" aria-pressed="false"
-						autocomplete="off">Regisztr√°ci√≥</button>
-
-					<input type="date" />
+						autocomplete="off">Regisztr·ciÛ</button>
 
 				</div>
 				<!-- col-md-6 2 -->
@@ -509,20 +588,21 @@
 
 	</form>
 
+
+	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script
+		src="resources/Carousel Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-		integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-		crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-		integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
-		crossorigin="anonymous">
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script
@@ -532,6 +612,9 @@
 
 	<!-- My own radio button displayer js -->
 	<script src="resources/js/RadioButton.js"></script>
+
+	<!-- Form progressbar js -->
+	<script src="resources/js/progress_BTSZ.js"></script>
 
 </body>
 </html>

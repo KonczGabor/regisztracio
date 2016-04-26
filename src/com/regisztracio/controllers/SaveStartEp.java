@@ -5,7 +5,6 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -70,14 +69,7 @@ public class SaveStartEp extends HttpServlet {
 		
 		StartEpSzamla startEpSzamla = new StartEpSzamla();
 		
-		startEpSzamla.setProba(elotag);
 		
-		try{
-			Date date = format.parse(stringDate);
-			startEpSzamla.setDate(date);
-		}catch (ParseException e){
-			 e.printStackTrace();
-		}
 		
 		
 		

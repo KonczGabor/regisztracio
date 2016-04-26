@@ -21,7 +21,7 @@
 
 .brand {
 	color: white;
-	padding-top: 20px;
+	padding-top: 10px;
 	padding-left: 150px;
 	font-size: 1.5em;
 }
@@ -29,6 +29,7 @@
 .logo {
 	float: left;
 	width: 60px;
+	
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -36,6 +37,7 @@
 .logo img {
 	height: 52px;
 	width: 42px;
+	margin-top: -10px;
 }
 
 .navbar-nav>li>a {

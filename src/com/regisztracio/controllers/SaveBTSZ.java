@@ -63,7 +63,12 @@ public class SaveBTSZ extends HttpServlet {
 		String utcaHazszam = request.getParameter("utcaHazszamId");
 		
 		String lvlOrszagok = request.getParameter("lvlOrszagokId");
-		Integer lvlIranyitoszam = Integer.parseInt(request.getParameter("lvlIranyitoszamId"));
+		String tmpLvlIranyitoszam = request.getParameter("lvlIranyitoszamId");
+		int lvlIranyitoszam = 0;
+		try{ lvlIranyitoszam = Integer.parseInt(tmpLvlIranyitoszam);}
+		catch (NumberFormatException ex){
+			lvlIranyitoszam = 0;
+		}		
 		String lvlHelyseg = request.getParameter("lvlHelysegId");		
 		String lvlUtcaHazszam = request.getParameter("lvlUtcaHazszamId");
 		
@@ -117,10 +122,10 @@ public class SaveBTSZ extends HttpServlet {
 		btsz.setHelyseg(helyseg);
 		btsz.setUtcaHazszam(utcaHazszam);
 				
-		btsz.setOrszag(Orszag.valueOf(lvlOrszagok));
-		btsz.setIranyitoszam(lvlIranyitoszam);
-		btsz.setHelyseg(lvlHelyseg);
-		btsz.setUtcaHazszam(lvlUtcaHazszam);
+		btsz.setLvlOrszag(Orszag.valueOf(lvlOrszagok));
+		btsz.setLvlIranyitoszam(lvlIranyitoszam);
+		btsz.setLvlHelyseg(lvlHelyseg);
+		btsz.setLvlUtcaHazszam(lvlUtcaHazszam);
 		
 		btsz.setAllampolgarsag(Allampolgarsag.valueOf(allampolgarsagok));
 		btsz.setAdoazonositoJel(adoazonositoJel);

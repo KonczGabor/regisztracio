@@ -13,46 +13,75 @@ import javax.persistence.*;
 
 public class BelfoldiJogiSzemely implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
 
 	public BelfoldiJogiSzemely() {
 		super();
 	}
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-   
-	private String jogiSzemelyNeve;
-	
-	private String adoszam;
-	
-	private String telephely;
-	
-	private String alapitoOkiratSzama;
-	
-	private Date tSzKelte;
-	
-	private String alapitokTulajdonosok;
-	
-	private Date cegBejKelte;
-	
-	private String egyStatSzam;
-	
-	private boolean webSzolgaltatas = false;
-	
-	private boolean mobilSzolgaltatas = false;
-	
-	private boolean teleSzolgaltatas = false;
-	
-	private SzamlaKivGyakorisag szamlaKivGyakorisag = SzamlaKivGyakorisag.Evente; 
-	
-	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalassal;
-	
-	private String giroSzamla;
-	
 
+	private String jogiSzemelyNeve;
+
+	// Székhely címe
+
+	@Enumerated(EnumType.STRING)
+	private Orszag orszag;
+
+	private Integer iranyitoszam;
+
+	private String helyseg;
+
+	private String utcaHazszam;
+
+	// Levelezési cím
+
+	@Enumerated(EnumType.STRING)
+	private Orszag lvlOrszag;
+
+	private Integer lvlIranyitoszam;
+
+	private String lvlHelyseg;
+
+	private String lvlUtcaHazszam;
+
+	// Személyes adatok
+
+	private String adoszam;
+
+	private String telephely;
+
+	private String alapitoOkiratSzama;
+
+	private Date tSzKelte;
+
+	// private String alapitokTulajdonosok;
+	
+	private String cegBejSzama;
+
+	private Date cegBejKelte;
+
+	private String egyStatSzam;
+
+	// Elektronikus szolgáltatásokkal kapcsolatos adatok
+
+	private String webSzolgaltatas = "";
+
+	private String mobilSzolgaltatas = "";
+
+	private String telSzolgaltatas = "";
+
+	// Számlát érintõ rendelkezések
+
+	@Enumerated(EnumType.STRING)
+	private SzamlaKivGyakorisag szamlaKivGyakorisag = SzamlaKivGyakorisag.Evente;
+
+	@Enumerated(EnumType.STRING)
+	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalassal;
+
+	private String giroSzamla;
 
 	public String getJogiSzemelyNeve() {
 		return jogiSzemelyNeve;
@@ -60,6 +89,70 @@ public class BelfoldiJogiSzemely implements Serializable {
 
 	public void setJogiSzemelyNeve(String jogiSzemelyNeve) {
 		this.jogiSzemelyNeve = jogiSzemelyNeve;
+	}
+
+	public Orszag getOrszag() {
+		return orszag;
+	}
+
+	public void setOrszag(Orszag orszag) {
+		this.orszag = orszag;
+	}
+
+	public Integer getIranyitoszam() {
+		return iranyitoszam;
+	}
+
+	public void setIranyitoszam(Integer iranyitoszam) {
+		this.iranyitoszam = iranyitoszam;
+	}
+
+	public String getHelyseg() {
+		return helyseg;
+	}
+
+	public void setHelyseg(String helyseg) {
+		this.helyseg = helyseg;
+	}
+
+	public String getUtcaHazszam() {
+		return utcaHazszam;
+	}
+
+	public void setUtcaHazszam(String utcaHazszam) {
+		this.utcaHazszam = utcaHazszam;
+	}
+
+	public Orszag getLvlOrszag() {
+		return lvlOrszag;
+	}
+
+	public void setLvlOrszag(Orszag lvlOrszag) {
+		this.lvlOrszag = lvlOrszag;
+	}
+
+	public Integer getLvlIranyitoszam() {
+		return lvlIranyitoszam;
+	}
+
+	public void setLvlIranyitoszam(Integer lvlIranyitoszam) {
+		this.lvlIranyitoszam = lvlIranyitoszam;
+	}
+
+	public String getLvlHelyseg() {
+		return lvlHelyseg;
+	}
+
+	public void setLvlHelyseg(String lvlHelyseg) {
+		this.lvlHelyseg = lvlHelyseg;
+	}
+
+	public String getLvlUtcaHazszam() {
+		return lvlUtcaHazszam;
+	}
+
+	public void setLvlUtcaHazszam(String lvlUtcaHazszam) {
+		this.lvlUtcaHazszam = lvlUtcaHazszam;
 	}
 
 	public String getAdoszam() {
@@ -94,12 +187,12 @@ public class BelfoldiJogiSzemely implements Serializable {
 		this.tSzKelte = tSzKelte;
 	}
 
-	public String getAlapitokTulajdonosok() {
-		return alapitokTulajdonosok;
+	public String getCegBejSzama() {
+		return cegBejSzama;
 	}
 
-	public void setAlapitokTulajdonosok(String alapitokTulajdonosok) {
-		this.alapitokTulajdonosok = alapitokTulajdonosok;
+	public void setCegBejSzama(String cegBejSzama) {
+		this.cegBejSzama = cegBejSzama;
 	}
 
 	public Date getCegBejKelte() {
@@ -118,28 +211,28 @@ public class BelfoldiJogiSzemely implements Serializable {
 		this.egyStatSzam = egyStatSzam;
 	}
 
-	public boolean isWebSzolgaltatas() {
+	public String getWebSzolgaltatas() {
 		return webSzolgaltatas;
 	}
 
-	public void setWebSzolgaltatas(boolean webSzolgaltatas) {
+	public void setWebSzolgaltatas(String webSzolgaltatas) {
 		this.webSzolgaltatas = webSzolgaltatas;
 	}
 
-	public boolean isMobilSzolgaltatas() {
+	public String getMobilSzolgaltatas() {
 		return mobilSzolgaltatas;
 	}
 
-	public void setMobilSzolgaltatas(boolean mobilSzolgaltatas) {
+	public void setMobilSzolgaltatas(String mobilSzolgaltatas) {
 		this.mobilSzolgaltatas = mobilSzolgaltatas;
 	}
 
-	public boolean isTeleSzolgaltatas() {
-		return teleSzolgaltatas;
+	public String getTelSzolgaltatas() {
+		return telSzolgaltatas;
 	}
 
-	public void setTeleSzolgaltatas(boolean teleSzolgaltatas) {
-		this.teleSzolgaltatas = teleSzolgaltatas;
+	public void setTelSzolgaltatas(String telSzolgaltatas) {
+		this.telSzolgaltatas = telSzolgaltatas;
 	}
 
 	public SzamlaKivGyakorisag getSzamlaKivGyakorisag() {
@@ -166,6 +259,13 @@ public class BelfoldiJogiSzemely implements Serializable {
 		this.giroSzamla = giroSzamla;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getId() {
+		return id;
+	}
 
 	
 }

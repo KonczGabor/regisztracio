@@ -40,6 +40,7 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	private String nevSzuletesi;	
 
+	@Enumerated(EnumType.STRING)
 	private Orszag orszag;
 
 	private Integer iranyitoszam;
@@ -47,7 +48,8 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	private String helyseg;
 
 	private String utcaHazszam;
-
+	
+	@Enumerated(EnumType.STRING)
 	private Orszag lvlOrszag;
 
 	private Integer lvlIranyitoszam;

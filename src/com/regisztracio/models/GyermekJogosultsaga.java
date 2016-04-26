@@ -1,5 +1,5 @@
 package com.regisztracio.models;
 
 public enum GyermekJogosultsaga {
-	GyermekvÃ©delmiÃ‰sÃtmenetiVagyTartÃ³s, NormÃ¡l, ÃtmeneteiVagyTartÃ³sNevelÃ©sbeVett, GyermekvÃ©delmiKedvezmÃ©nyreJogosult
+	GyermekvédelmiÉsÁtmenetiVagyTartós, Normál, ÁtmeneteiVagyTartósNevelésbeVett, GyermekvédelmiKedvezményreJogosult
 }
