@@ -14,6 +14,38 @@
 	href="resources/Carousel Template for Bootstrap_files/bootstrap.min.css"
 	rel="stylesheet">
 
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!--     <script src="resources/Carousel Template for Bootstrap_files/jquery.min.js"></script> -->
+
+	<!-- 	sajat -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!--     <script src="resources/Carousel Template for Bootstrap_files/bootstrap.min.js"></script> -->
+
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+		integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+		crossorigin="anonymous">
+		
+	</script>
+
+	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	<script
+		src="resources/Carousel Template for Bootstrap_files/holder.min.js"></script>
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script
+		src="resources/Carousel Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
+	<script src="resources/js/navbar.js"></script>
+
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <link
 	href="resources/Carousel Template for Bootstrap_files/ie10-viewport-bug-workaround.css"
@@ -31,7 +63,11 @@
 	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
 	crossorigin="anonymous">
 
-
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+	crossorigin="anonymous" />
 
 <!-- Custom styles for this template -->
 <link
@@ -56,10 +92,22 @@
 <!--Load Paul Irish’s Debounced resize plug-in-->
 <script src="resources/js/debounce.js"></script>
 
+
+
+</head>
+<body>
+
+<% String dataDiagram; %>
+
 <script type="text/javascript">
 	// Load the Visualization API and the AreaChart package.
 	google.load('visualization', '1.0', {
-		'packages' : [ 'corechart' ]
+		'packages' : [ 'corechart', 'table' ]}
+		
+	);
+	
+	google.charts.load('current', {
+		'packages' : [ 'table' ]
 	});
 
 	// Set a callback to run when the Google Visualization API is loaded.
@@ -73,7 +121,7 @@
 		// Create the data table.
 		var data = new google.visualization.DataTable();
 		data.addColumn('string', 'Year');
-		data.addColumn('number', 'Google results');
+		data.addColumn('number', 'BUX index');
 		data
 
 		.addRows([ [ '2016.03.29', 25872 ], [ '2016.03.30', 26314 ],
@@ -122,48 +170,50 @@
 			chart.draw(data, options);
 		});
 	}
-</script>
 
 
-<!--Táblázat-->
-<script type="text/javascript">
-	google.charts.load('current', {
-		'packages' : [ 'table' ]
-	});
+
+
 	google.charts.setOnLoadCallback(drawTable);
 
 	function drawTable() {
-		var data = new google.visualization.DataTable();
-		data.addColumn('string', 'Name');
-		data.addColumn('number', 'Salary');
-		data.addColumn('boolean', 'Full Time Employee');
-		data.addRows([ [ 'Mike', {
-			v : 10000,
-			f : '$10,000'
-		}, true ], [ 'Jim', {
-			v : 8000,
-			f : '$8,000'
-		}, false ], [ 'Alice', {
-			v : 12500,
-			f : '$12,500'
-		}, true ], [ 'Bob', {
-			v : 7000,
-			f : '$7,000'
-		}, true ] ]);
+		var data1 = new google.visualization.DataTable();
+		data1.addColumn('string', 'Dátum');
+		data1.addColumn('number', 'Nyitó');
+		data1.addColumn('number', 'Záró');
+		data1.addColumn('number', 'Maximum');
+		data1.addColumn('number', 'Minimum');
+				
+		data1.addRows([ 
+		               [ '2016.03.29', {v : 25445, f : '25445' }, {v : 25737, f : '25737' }, {v : 25872, f : '25872' }, {v : 25445, f : '25445' }  ],
+		               [ '2016.03.30', {v : 25743, f : '25743' }, {v : 26314, f : '26314' }, {v : 26314, f : '26314' }, {v : 25743, f : '25743' }  ],
+		               [ '2016.03.31', {v : 26326, f : '26326' }, {v : 26451, f : '26451' }, {v : 26452, f : '26452' }, {v : 26132, f : '26132' }  ],
+		               [ '2016.04.01', {v : 26449, f : '26449' }, {v : 26310, f : '26310' }, {v : 26449, f : '26449' }, {v : 26165, f : '26165' }  ],
+		               [ '2016.04.04', {v : 26343, f : '26343' }, {v : 26412, f : '26412' }, {v : 26438, f : '26438' }, {v : 26247, f : '26247' }  ],
+		               [ '2016.04.05', {v : 26402, f : '26402' }, {v : 26210, f : '26210' }, {v : 26402, f : '26402' }, {v : 26148, f : '26148' }  ],
+		               [ '2016.04.06', {v : 26218, f : '26218' }, {v : 26298, f : '26298' }, {v : 26309, f : '26309' }, {v : 26116, f : '26116' }  ],
+		               [ '2016.04.07', {v : 26313, f : '26313' }, {v : 26397, f : '26397' }, {v : 26440, f : '26440' }, {v : 26306, f : '26306' }  ],
+		               [ '2016.04.08', {v : 26434, f : '26434' }, {v : 26513, f : '26513' }, {v : 26528, f : '26528' }, {v : 26329, f : '26329' }  ],
+		               [ '2016.04.11', {v : 26544, f : '26544' }, {v : 26268, f : '26268' }, {v : 26650, f : '26650' }, {v : 26237, f : '26237' }  ],
+		               [ '2016.04.12', {v : 26305, f : '26305' }, {v : 26027, f : '26027' }, {v : 26365, f : '26365' }, {v : 10000, f : '25892' }  ]
+		        
+		
+		
+		
+		]);
 
 		var table = new google.visualization.Table(document
 				.getElementById('table_div'));
 
-		table.draw(data, {
+		table.draw(data1, {
 			showRowNumber : true,
 			width : '100%',
-			height : '100%'
+			height : '100%',
 		});
 	}
 </script>
 
-</head>
-<body>
+
 
 	<header>
 	<div role="navigation" class="navbar navbar-fixed-top">
@@ -222,5 +272,6 @@
 		<div id="chart_div"></div>
 	</div>
 	<!-- Container -->
+
 </body>
 </html>
