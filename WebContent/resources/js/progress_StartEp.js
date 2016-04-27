@@ -42,33 +42,23 @@ if (numValid == 6) {
     progressMessage.text("60% Complete.");
 }
 if (numValid == 7) {
-    progress.attr("value", "80");
-    progressMessage.text("80% Complete.");
+    progress.attr("value", "70");
+    progressMessage.text("70% Complete.");
 }
+
 if (numValid == 8) {
     progress.attr("value", "90");
     progressMessage.text("90% Complete.");
 }
-//if (numValid == 9) {
-//    progress.attr("value", "80");
-//    progressMessage.text("80% Complete.");
-//}
-//if (numValid == 10) {
-//    progress.attr("value", "85");
-//    progressMessage.text("85% Complete.");
-//}
 
-//if (numValid == 11) {
-//    progress.attr("value", "90");
-//    progressMessage.text("90% Complete.");
-//}
-//if (numValid == 12) {
-//    progress.attr("value", "95");
-//    progressMessage.text("95% Complete.");
-//}
 if (numValid == 9) {
     progress.attr("value", "100");
     progressMessage.text("Please Click to the Regisztracio button!");
 }
+
+//if (numValid == 10) {
+//    progress.attr("value", "100");
+//    progressMessage.text("Please Click to the Regisztracio button!");
+//}
   
 });

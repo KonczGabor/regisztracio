@@ -74,7 +74,7 @@
 	</div>
 	</header>
 
-	<form method="POST" action="SaveBTSZ" class="pro-form" id="pro-form">
+	<form method="POST" action="SaveStartEp" class="pro-form" id="pro-form">
 
 		<div class="container marketing">
 		
@@ -397,6 +397,31 @@
 									</div>
 								</div>
 								<!-- Panel4 row9 -->
+								
+								<div class="row featurette">
+									<p>Gyermek jogosultsága Kérem válasszon...</p>
+									<div class="form-group">
+										<select class="form-control" name="gyermekJogosultsagaId">
+											<option value="GyermekvédelmiÉsÁtmenetiVagyTartós">Gyermekvédelmi és átmeneti vagy tartós</option>
+											<option value="Normál">Normál</option>
+											<option value="ÁtmeneteiVagyTartósNevelésbeVett">Átmenetei vagy tartós nevelésbe vett</option>
+											<option value="GyermekvédelmiKedvezményreJogosult">Gyermekvédelmi kedvezményre jogosult</option>
+										</select>
+									</div>
+								</div>
+								<!-- Panel4 row10 -->
+								
+								<div class="row featurette">
+									<p>Nevelés jellege Kérem válasszon... 	</p>
+									<div class="form-group">
+										<select class="form-control" name="nevelesJellegeId">
+											<option value="Szulo">Szülõ</option>
+											<option value="AtmenetiNevelesbeVett">Átmeneti nevelésbe vett</option>
+											<option value="TartosNevelesbeVett">Tartós nevelésbe vett</option>
+										</select>
+									</div>
+								</div>
+								<!-- Panel4 row11 -->
 
 								<div class="row featurette">
 									<p>Útlevél száma</p>
@@ -405,7 +430,7 @@
 											placeholder="" aria-describedby="basic-addon1">
 									</div>
 								</div>
-								<!-- Panel4 row10 -->
+								<!-- Panel4 row12 -->
 
 								<div class="row featurette">
 									<p>Jogosítvány száma</p>
@@ -415,9 +440,7 @@
 											aria-describedby="basic-addon1">
 									</div>
 								</div>
-								<!-- Panel4 row11 -->
-
-
+								<!-- Panel4 row13 -->		
 
 							</div>
 							<!--ContainerSajat Panel4 belsõ-->
@@ -507,53 +530,7 @@
 						<!-- Panel5 - body -->
 					</div>
 					<!--Panel5 -->
-
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">Számlát érintõ rendelkezések</h3>
-						</div>
-						<div class="panel-body">
-							<div class="ContainerSajat">
-								<div class="row featurette">
-									<p>Számlakivonat gyakorisága</p>
-									<div class="form-group">
-										<select class="form-control" name="szlaGyakorisagId">
-											<option value="Evente">Évente</option>
-											<option value="NemKer">Nem Kér</option>
-										</select>
-									</div>
-								</div>
-								<!-- Panel6 row1 -->
-
-								<div class="row featurette">
-									<p>Esedékességfizetés módja</p>
-									<div class="form-group">
-										<select class="form-control" name="esedekessegId">
-											<option value="BankiUtalassal">Készpénz-számla</option>
-											<option value="KeszpenzPenzszamla">Banki utalással</option>
-										</select>
-									</div>
-								</div>
-								<!-- Panel6 row2 -->
-
-								<div class="row featurette">
-									<p>Giro számlaszám utalásos esedékességfizetési rendelkezés
-										esetén</p>
-									<div class="input-group">
-										<input name="giroSzamlaId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1">
-									</div>
-								</div>
-								<!-- Panel6 row3 -->
-
-							</div>
-							<!--ContainerSajat Panel6 belsõ-->
-
-						</div>
-						<!-- Panel6 - body -->
-					</div>
-					<!--Panel6 -->
-
+				
 				</div>
 				<!-- col-md-6 2 -->
 
@@ -614,7 +591,7 @@
 	<script src="resources/js/RadioButton.js"></script>
 
 	<!-- Form progressbar js -->
-	<script src="resources/js/progress_BTSZ.js"></script>
+	<script src="resources/js/progress_StartEp.js"></script>
 
 </body>
 </html>

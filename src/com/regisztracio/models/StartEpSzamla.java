@@ -76,6 +76,12 @@ public class StartEpSzamla implements Serializable {
 	private String szulHely;
 
 	private String anyjaNeve;
+	
+	@Enumerated(EnumType.STRING)
+	private GyermekJogosultsaga gyermekJogosultsaga;
+	
+	@Enumerated(EnumType.STRING)
+	private NevelesJellege nevelesJellege;
 
 	private String utlevelSzama;
 
@@ -86,14 +92,6 @@ public class StartEpSzamla implements Serializable {
 	private String mobilSzolgaltatas = "";
 
 	private String telSzolgaltatas = "";
-
-	@Enumerated(EnumType.STRING)
-	private SzamlaKivGyakorisag szamlaKivGyakorisag = SzamlaKivGyakorisag.Evente;
-
-	@Enumerated(EnumType.STRING)
-	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalassal;
-
-	private String giroSzamla;
 
 	public String getNevElotag() {
 		return nevElotag;
@@ -271,6 +269,22 @@ public class StartEpSzamla implements Serializable {
 		this.anyjaNeve = anyjaNeve;
 	}
 
+	public GyermekJogosultsaga getGyermekJogosultsaga() {
+		return gyermekJogosultsaga;
+	}
+
+	public void setGyermekJogosultsaga(GyermekJogosultsaga gyermekJogosultsaga) {
+		this.gyermekJogosultsaga = gyermekJogosultsaga;
+	}
+
+	public NevelesJellege getNevelesJellege() {
+		return nevelesJellege;
+	}
+
+	public void setNevelesJellege(NevelesJellege nevelesJellege) {
+		this.nevelesJellege = nevelesJellege;
+	}
+
 	public String getUtlevelSzama() {
 		return utlevelSzama;
 	}
@@ -311,30 +325,6 @@ public class StartEpSzamla implements Serializable {
 		this.telSzolgaltatas = telSzolgaltatas;
 	}
 
-	public SzamlaKivGyakorisag getSzamlaKivGyakorisag() {
-		return szamlaKivGyakorisag;
-	}
-
-	public void setSzamlaKivGyakorisag(SzamlaKivGyakorisag szamlaKivGyakorisag) {
-		this.szamlaKivGyakorisag = szamlaKivGyakorisag;
-	}
-
-	public EsedekessegFizMod getEsedekessegFizMod() {
-		return esedekessegFizMod;
-	}
-
-	public void setEsedekessegFizMod(EsedekessegFizMod esedekessegFizMod) {
-		this.esedekessegFizMod = esedekessegFizMod;
-	}
-
-	public String getGiroSzamla() {
-		return giroSzamla;
-	}
-
-	public void setGiroSzamla(String giroSzamla) {
-		this.giroSzamla = giroSzamla;
-	}
-
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
@@ -343,6 +333,20 @@ public class StartEpSzamla implements Serializable {
 		return id;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "StartEpSzamla [id=" + id + ", nevElotag=" + nevElotag + ", nevVezetek=" + nevVezetek + ", nevKeresztv="
+				+ nevKeresztv + ", nevUto=" + nevUto + ", nevSzuletesi=" + nevSzuletesi + ", orszag=" + orszag
+				+ ", iranyitoszam=" + iranyitoszam + ", helyseg=" + helyseg + ", utcaHazszam=" + utcaHazszam
+				+ ", lvlOrszag=" + lvlOrszag + ", lvlIranyitoszam=" + lvlIranyitoszam + ", lvlHelyseg=" + lvlHelyseg
+				+ ", lvlUtcaHazszam=" + lvlUtcaHazszam + ", allampolgarsag=" + allampolgarsag + ", adoazonositoJel="
+				+ adoazonositoJel + ", szigSzam=" + szigSzam + ", szigKHNeve=" + szigKHNeve + ", szigKHSzekhelye="
+				+ szigKHSzekhelye + ", lakcimkartya=" + lakcimkartya + ", szulIdo=" + szulIdo + ", szulHely=" + szulHely
+				+ ", anyjaNeve=" + anyjaNeve + ", gyermekJogosultsaga=" + gyermekJogosultsaga + ", nevelesJellege="
+				+ nevelesJellege + ", utlevelSzama=" + utlevelSzama + ", jogositvanySzama=" + jogositvanySzama
+				+ ", webSzolgaltatas=" + webSzolgaltatas + ", mobilSzolgaltatas=" + mobilSzolgaltatas
+				+ ", telSzolgaltatas=" + telSzolgaltatas + "]";
+	}	
+
 	
 }

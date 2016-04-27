@@ -17,6 +17,8 @@ import javax.persistence.Transient;
  */
 @Entity
 
+
+
 public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	@Transient
@@ -34,6 +36,8 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	private String nevVezetek;
 
+//	private String alma ="'[a'],"; 
+	
 	private String nevKeresztv;
 
 	private String nevUto;
