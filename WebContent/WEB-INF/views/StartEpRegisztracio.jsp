@@ -45,7 +45,7 @@
 
 	<header>
 	<div role="navigation" class="navbar navbar-fixed-top">
-		<a href="index.html" class="navbar-brand navbar-brand-logo">
+		<a href="ForwardToMainJSP" class="navbar-brand navbar-brand-logo">
 			<div class="logo">
 				<img src="resources/img/logo.png" />
 			</div>

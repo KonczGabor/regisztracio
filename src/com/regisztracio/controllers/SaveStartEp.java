@@ -1,9 +1,6 @@
 package com.regisztracio.controllers;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -15,13 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.regisztracio.models.Allampolgarsag;
-import com.regisztracio.models.BelfoldiTermeszetesSzemely;
-import com.regisztracio.models.EsedekessegFizMod;
 import com.regisztracio.models.GyermekJogosultsaga;
 import com.regisztracio.models.NevelesJellege;
 import com.regisztracio.models.Orszag;
 import com.regisztracio.models.StartEpSzamla;
-import com.regisztracio.models.SzamlaKivGyakorisag;
 import com.regisztracio.service.StartEpService;
 
 /**

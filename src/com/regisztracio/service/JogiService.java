@@ -9,7 +9,6 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
 import com.regisztracio.models.BelfoldiJogiSzemely;
-import com.regisztracio.models.BelfoldiTermeszetesSzemely;
 
 /**
  * Session Bean implementation class TermeszetesService
