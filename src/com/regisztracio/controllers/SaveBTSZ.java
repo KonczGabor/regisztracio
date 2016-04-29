@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import javax.ejb.EJB;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -115,8 +116,8 @@ public class SaveBTSZ extends HttpServlet {
 		BelfoldiTermeszetesSzemely btsz = new BelfoldiTermeszetesSzemely();
 
 		btsz.setNevElotag(elotag);
-		btsz.setNevKeresztv(vezetekNev);
-		btsz.setNevVezetek(keresztNev);
+		btsz.setNevKereszt(keresztNev);
+		btsz.setNevVezetek(vezetekNev);
 		btsz.setNevUto(masodikUtonev);
 		btsz.setNevSzuletesi(szuletesiNev);
 
@@ -156,9 +157,12 @@ public class SaveBTSZ extends HttpServlet {
 
 		termeszetesService.addNewBTSZ(btsz);
 		
+		request.setAttribute("elkeszult_btsz", btsz);
 		
+		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/views/SikeresBTSZRegisztracio.jsp");
 
-		response.sendRedirect("ForwardToSikRegJSP");
+		view.forward(request, response);
+		
 
 	}
 

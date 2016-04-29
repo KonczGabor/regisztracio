@@ -38,7 +38,7 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	private String nevVezetek;
 
-	private String nevKeresztv;
+	private String nevKereszt;
 
 	private String nevUto;
 
@@ -131,12 +131,12 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		this.nevVezetek = nevVezetek;
 	}
 
-	public String getNevKeresztv() {
-		return nevKeresztv;
+	public String getNevKereszt() {
+		return nevKereszt;
 	}
 
-	public void setNevKeresztv(String nevKeresztv) {
-		this.nevKeresztv = nevKeresztv;
+	public void setNevKereszt(String nevKereszt) {
+		this.nevKereszt = nevKereszt;
 	}
 
 	public String getNevUto() {
@@ -366,7 +366,7 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	@Override
 	public String toString() {
 		return "BelfoldiTermeszetesSzemely [id=" + id + ", userID=" + userID + ", userCode=" + userCode + ", nevElotag="
-				+ nevElotag + ", nevVezetek=" + nevVezetek + ", nevKeresztv=" + nevKeresztv + ", nevUto=" + nevUto
+				+ nevElotag + ", nevVezetek=" + nevVezetek + ", nevKeresztv=" + nevKereszt + ", nevUto=" + nevUto
 				+ ", nevSzuletesi=" + nevSzuletesi + ", orszag=" + orszag + ", iranyitoszam=" + iranyitoszam
 				+ ", helyseg=" + helyseg + ", utcaHazszam=" + utcaHazszam + ", lvlOrszag=" + lvlOrszag
 				+ ", lvlIranyitoszam=" + lvlIranyitoszam + ", lvlHelyseg=" + lvlHelyseg + ", lvlUtcaHazszam="

@@ -111,8 +111,8 @@ public class SaveStartEp extends HttpServlet {
 
 		
 		startEpSzamla.setNevElotag(elotag);
-		startEpSzamla.setNevKeresztv(vezetekNev);
-		startEpSzamla.setNevVezetek(keresztNev);
+		startEpSzamla.setNevKeresztv(keresztNev);
+		startEpSzamla.setNevVezetek(vezetekNev);
 		startEpSzamla.setNevUto(masodikUtonev);
 		startEpSzamla.setNevSzuletesi(szuletesiNev);
 		

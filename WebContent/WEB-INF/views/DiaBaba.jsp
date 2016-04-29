@@ -278,6 +278,15 @@
 		</div>
 		<!-- row3 -->
 
+
+		<footer>
+		<hr>
+		<p class="pull-right">
+			<a href="ForwardToMainJSP"><< Főoldal</a>
+		</p>
+		<p>© 2016 Koncz Gabor, Szakdolgozat</p>
+		</footer>
+
 	</div>
 	<!-- Container -->
 
