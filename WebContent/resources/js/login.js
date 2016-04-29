@@ -4,7 +4,7 @@ $(document)
 
 					var username = "<input id=\"username\" type=\"text\" placeholder=\"username\" name=\"user\">";
 					var password = "<input id=\"password\" type=\"password\" placeholder=\"password\" name=\"password\">";
-					var authentication_button = "<button id=\"azonositas_button\">Azonosítas</button><br><br>";
+					var authentication_button = "<button id=\"azonositas_button\">Azonosítas</button>";
 
 					$("#row1").after(username);
 					$("#row2").after(password);

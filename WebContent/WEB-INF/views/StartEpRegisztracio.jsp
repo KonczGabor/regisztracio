@@ -61,14 +61,18 @@
 
 				<li><div class="progress-wrap, progressbar">
 						<progress max="100" value="0" id="progress"></progress>
-						<div class="progress-message" id="progress-message">Kérem töltse ki a kötelezõ,*-al jelölt mezõket!</div>
+						<div class="progress-message" id="progress-message">Kérem
+							töltse ki a kötelezõ,*-al jelölt mezõket!</div>
 					</div></li>
-				<li><a href="utas_regisztracio"><span
-						class="glyphicon glyphicon-briefcase"></span>
-						<p>Utas Regisztrácó</p></a></li>
-				<li><a href="pilota_regisztracio"><span
-						class="glyphicon glyphicon-sunglasses"></span>
-						<p>Pilota Regisztracio</p></a></li>
+				<li><a href="ForwardToDiaBuxJSP"><span
+						class="glyphicon glyphicon-stats"></span>
+						<p>BUX</p></a></li>
+				<li><a href="ForwardToDiaBabaJSP"><span
+						class="glyphicon glyphicon-align-left"></span>
+						<p>Baba kötvény</p></a></li>
+				<li><a href="index.html"><span
+						class="glyphicon glyphicon-remove-sign"></span>
+						<p>Kilépés</p></a></li>
 			</ul>
 		</div>
 	</div>
@@ -77,7 +81,7 @@
 	<form method="POST" action="SaveStartEp" class="pro-form" id="pro-form">
 
 		<div class="container marketing">
-		
+
 			<h1>Start Értékpapír Számla</h1>
 			<br> <br>
 
@@ -397,27 +401,32 @@
 									</div>
 								</div>
 								<!-- Panel4 row9 -->
-								
+
 								<div class="row featurette">
 									<p>Gyermek jogosultsága Kérem válasszon...</p>
 									<div class="form-group">
 										<select class="form-control" name="gyermekJogosultsagaId">
-											<option value="GyermekvédelmiÉsÁtmenetiVagyTartós">Gyermekvédelmi és átmeneti vagy tartós</option>
+											<option value="GyermekvédelmiÉsÁtmenetiVagyTartós">Gyermekvédelmi
+												és átmeneti vagy tartós</option>
 											<option value="Normál">Normál</option>
-											<option value="ÁtmeneteiVagyTartósNevelésbeVett">Átmenetei vagy tartós nevelésbe vett</option>
-											<option value="GyermekvédelmiKedvezményreJogosult">Gyermekvédelmi kedvezményre jogosult</option>
+											<option value="ÁtmeneteiVagyTartósNevelésbeVett">Átmenetei
+												vagy tartós nevelésbe vett</option>
+											<option value="GyermekvédelmiKedvezményreJogosult">Gyermekvédelmi
+												kedvezményre jogosult</option>
 										</select>
 									</div>
 								</div>
 								<!-- Panel4 row10 -->
-								
+
 								<div class="row featurette">
-									<p>Nevelés jellege Kérem válasszon... 	</p>
+									<p>Nevelés jellege Kérem válasszon...</p>
 									<div class="form-group">
 										<select class="form-control" name="nevelesJellegeId">
 											<option value="Szulo">Szülõ</option>
-											<option value="AtmenetiNevelesbeVett">Átmeneti nevelésbe vett</option>
-											<option value="TartosNevelesbeVett">Tartós nevelésbe vett</option>
+											<option value="AtmenetiNevelesbeVett">Átmeneti
+												nevelésbe vett</option>
+											<option value="TartosNevelesbeVett">Tartós nevelésbe
+												vett</option>
 										</select>
 									</div>
 								</div>
@@ -440,7 +449,7 @@
 											aria-describedby="basic-addon1">
 									</div>
 								</div>
-								<!-- Panel4 row13 -->		
+								<!-- Panel4 row13 -->
 
 							</div>
 							<!--ContainerSajat Panel4 belsõ-->
@@ -530,7 +539,7 @@
 						<!-- Panel5 - body -->
 					</div>
 					<!--Panel5 -->
-				
+
 				</div>
 				<!-- col-md-6 2 -->
 
@@ -541,7 +550,7 @@
 			<div class="row featurette">
 				<div class="col-md-6">
 
-					<a href="index.html" class="btn btn-info" role="button">Mégse</a>
+					<a href="ForwardToMainJSP" class="btn btn-info" role="button">Mégse</a>
 
 				</div>
 				<!-- col-md-6 1 -->

@@ -17,8 +17,6 @@ import javax.persistence.Transient;
  */
 @Entity
 
-
-
 public class BelfoldiTermeszetesSzemely implements Serializable {
 
 	@Transient
@@ -32,17 +30,19 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
+	private String userID;
+
+	private String userCode;
+
 	private String nevElotag;
 
 	private String nevVezetek;
 
-//	private String alma ="'[a'],"; 
-	
 	private String nevKeresztv;
 
 	private String nevUto;
 
-	private String nevSzuletesi;	
+	private String nevSzuletesi;
 
 	@Enumerated(EnumType.STRING)
 	private Orszag orszag;
@@ -52,7 +52,7 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	private String helyseg;
 
 	private String utcaHazszam;
-	
+
 	@Enumerated(EnumType.STRING)
 	private Orszag lvlOrszag;
 
@@ -61,16 +61,16 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	private String lvlHelyseg;
 
 	private String lvlUtcaHazszam;
-	
+
 	@Enumerated(EnumType.STRING)
 	private Allampolgarsag allampolgarsag;
-	
+
 	private Integer adoazonositoJel;
 
 	private String szigSzam;
 
-	private String szigKHNeve; 
-	
+	private String szigKHNeve;
+
 	private String szigKHSzekhelye;
 
 	private String lakcimkartya;
@@ -98,6 +98,22 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 	private EsedekessegFizMod esedekessegFizMod = EsedekessegFizMod.BankiUtalassal;
 
 	private String giroSzamla;
+
+	public String getUserID() {
+		return userID;
+	}
+
+	public void setUserID(String userID) {
+		this.userID = userID;
+	}
+
+	public String getUserCode() {
+		return userCode;
+	}
+
+	public void setUserCode(String userCode) {
+		this.userCode = userCode;
+	}
 
 	public String getNevElotag() {
 		return nevElotag;
@@ -347,6 +363,20 @@ public class BelfoldiTermeszetesSzemely implements Serializable {
 		return id;
 	}
 
-	
-	
+	@Override
+	public String toString() {
+		return "BelfoldiTermeszetesSzemely [id=" + id + ", userID=" + userID + ", userCode=" + userCode + ", nevElotag="
+				+ nevElotag + ", nevVezetek=" + nevVezetek + ", nevKeresztv=" + nevKeresztv + ", nevUto=" + nevUto
+				+ ", nevSzuletesi=" + nevSzuletesi + ", orszag=" + orszag + ", iranyitoszam=" + iranyitoszam
+				+ ", helyseg=" + helyseg + ", utcaHazszam=" + utcaHazszam + ", lvlOrszag=" + lvlOrszag
+				+ ", lvlIranyitoszam=" + lvlIranyitoszam + ", lvlHelyseg=" + lvlHelyseg + ", lvlUtcaHazszam="
+				+ lvlUtcaHazszam + ", allampolgarsag=" + allampolgarsag + ", adoazonositoJel=" + adoazonositoJel
+				+ ", szigSzam=" + szigSzam + ", szigKHNeve=" + szigKHNeve + ", szigKHSzekhelye=" + szigKHSzekhelye
+				+ ", lakcimkartya=" + lakcimkartya + ", szulIdo=" + szulIdo + ", szulHely=" + szulHely + ", anyjaNeve="
+				+ anyjaNeve + ", utlevelSzama=" + utlevelSzama + ", jogositvanySzama=" + jogositvanySzama
+				+ ", webSzolgaltatas=" + webSzolgaltatas + ", mobilSzolgaltatas=" + mobilSzolgaltatas
+				+ ", telSzolgaltatas=" + telSzolgaltatas + ", szamlaKivGyakorisag=" + szamlaKivGyakorisag
+				+ ", esedekessegFizMod=" + esedekessegFizMod + ", giroSzamla=" + giroSzamla + "]";
+	}
+
 }

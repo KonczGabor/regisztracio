@@ -221,7 +221,7 @@
 
 	<header>
 	<div role="navigation" class="navbar navbar-fixed-top">
-		<a href="index.html" class="navbar-brand navbar-brand-logo">
+		<a href="ForwardToMainJSP" class="navbar-brand navbar-brand-logo">
 			<div class="logo">
 				<img src="resources/img/logo.png" />
 			</div>
@@ -235,12 +235,12 @@
 		<div class="collapse navbar-collapse navHeaderCollapse">
 			<ul id="top-menu" class="nav navbar-nav navbar-right">
 
-				<li><a href="utas_regisztracio"><span
-						class="glyphicon glyphicon-briefcase"></span>
-						<p>Utas Regisztrácó</p></a></li>
-				<li><a href="pilota_regisztracio"><span
-						class="glyphicon glyphicon-sunglasses"></span>
-						<p>Pilota Regisztracio</p></a></li>
+				<li><a href="ForwardToDiaBabaJSP"><span
+							class="glyphicon glyphicon-align-left"></span>
+							<p>Baba kötvény</p></a></li>
+				<li><a href="index.html"><span
+						class="glyphicon glyphicon-remove-sign"></span>
+						<p>Kilépés</p></a></li>
 			</ul>
 		</div>
 	</div>

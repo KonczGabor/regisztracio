@@ -55,7 +55,7 @@
 
 	<header>
 		<div role="navigation" class="navbar navbar-fixed-top">
-			<a href="index.html" class="navbar-brand navbar-brand-logo">
+			<a href="ForwardToMainJSP" class="navbar-brand navbar-brand-logo">
 				<div class="logo">
 					<img src="resources/img/logo.png" />
 				</div>
@@ -69,23 +69,14 @@
 			<div class="collapse navbar-collapse navHeaderCollapse">
 				<ul id="top-menu" class="nav navbar-nav navbar-right">
 					<li><a href="ForwardToDiaBuxJSP"><span
-							class="glyphicon glyphicon-tags"></span>
-							<p>Jegyfoglalas</p></a></li>
-					<li><a href="Jaratok"><span
-							class="glyphicon glyphicon-plane"></span>
-							<p>Járatok</p></a></li>
-					<li><a href="Utasok"><span
-							class="glyphicon glyphicon-user"></span>
-							<p>Utasok</p></a></li>
-					<li><a href="jarat_regisztracio"><span
-							class="glyphicon glyphicon-globe"></span>
-							<p>Járat Regisztráció</p></a></li>
-					<li><a href="utas_regisztracio"><span
-							class="glyphicon glyphicon-briefcase"></span>
-							<p>Utas Regisztrácó</p></a></li>
-					<li><a href="pilota_regisztracio"><span
-							class="glyphicon glyphicon-sunglasses"></span>
-							<p>Pilota Regisztracio</p></a></li>
+							class="glyphicon glyphicon-stats"></span>
+							<p>BUX</p></a></li>
+					<li><a href="ForwardToDiaBabaJSP"><span
+							class="glyphicon glyphicon-align-left"></span>
+							<p>Baba kötvény</p></a></li>					
+					<li><a href="index.html"><span
+							class="glyphicon glyphicon-remove-sign"></span>
+							<p>Kilépés</p></a></li>
 				</ul>
 			</div>
 		</div>
@@ -138,12 +129,11 @@
 					alt="Third slide">
 				<div class="container">
 					<div class="carousel-caption">
-						<h1>Elképesztő programok</h1>
-						<p>Dunaújváros nem csak elképesztő programokat, de számos
-							kikapcsolódási lehetőséget is nyújt!</p>
+						<h1>Magyar Államkötvény</h1>
+						<p>Egy évnél hosszabb futamidejű állampapír, ezért elsősorban pénzüket hosszú távra befektetni kívánóknak ajánljuk.</p>
 						<p>
 							<a class="btn btn-lg btn-primary"
-								href="http://dunaujvaros.com/programok" role="button">Programajánló</a>
+								href="" role="button">Programajánló</a>
 						</p>
 					</div>
 				</div>
@@ -293,7 +283,7 @@
 		<!-- FOOTER -->
 		<footer>
 			<p class="pull-right">
-				<a href="index.html">Back to top</a>
+				<a href="ForwardToMainJSP">Back to top</a>
 			</p>
 			<p>© 2016 Koncz Gabor, Szakdolgozat</p>
 		</footer>

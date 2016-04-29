@@ -38,11 +38,7 @@ public class BTSZList extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-		List<BelfoldiTermeszetesSzemely> bTSZList = (List<BelfoldiTermeszetesSzemely>) termeszetesService.getBTSZList();
-
-		request.setAttribute("bTSZList", bTSZList);
+			throws ServletException, IOException {	
 		
 		RequestDispatcher view = request.getRequestDispatcher("WEB-INF/views/BTSZList.jsp");
 

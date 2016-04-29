@@ -45,7 +45,7 @@
 
 	<header>
 	<div role="navigation" class="navbar navbar-fixed-top">
-		<a href="index.html" class="navbar-brand navbar-brand-logo">
+		<a href="ForwardToMainJSP" class="navbar-brand navbar-brand-logo">
 			<div class="logo">
 				<img src="resources/img/logo.png" />
 			</div>
@@ -64,12 +64,15 @@
 						<div class="progress-message" id="progress-message">Kérem
 							töltse ki a kötelezõ,*-al jelölt mezõket!</div>
 					</div></li>
-				<li><a href="utas_regisztracio"><span
-						class="glyphicon glyphicon-briefcase"></span>
-						<p>Utas Regisztrácó</p></a></li>
-				<li><a href="pilota_regisztracio"><span
-						class="glyphicon glyphicon-sunglasses"></span>
-						<p>Pilota Regisztracio</p></a></li>
+				<li><a href="ForwardToDiaBuxJSP"><span
+						class="glyphicon glyphicon-stats"></span>
+						<p>BUX</p></a></li>
+				<li><a href="ForwardToDiaBabaJSP"><span
+						class="glyphicon glyphicon-align-left"></span>
+						<p>Baba kötvény</p></a></li>
+				<li><a href="index.html"><span
+						class="glyphicon glyphicon-remove-sign"></span>
+						<p>Kilépés</p></a></li>
 			</ul>
 		</div>
 	</div>
@@ -261,7 +264,8 @@
 									<p>Adószám*</p>
 									<div class="input-group">
 										<input name="adoszId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1" required pattern="[0-9]*">
+											placeholder="" aria-describedby="basic-addon1" required
+											pattern="[0-9]*">
 									</div>
 								</div>
 								<!-- Panel4 row1 -->
@@ -270,7 +274,8 @@
 									<p>Telephelye</p>
 									<div class="input-group">
 										<input name="telephelyId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1" required pattern="^[A-ZÁÉÍÓÖÕÚÜÛ][a-záéíóöõúüû]*$">
+											placeholder="" aria-describedby="basic-addon1" required
+											pattern="^[A-ZÁÉÍÓÖÕÚÜÛ][a-záéíóöõúüû]*$">
 									</div>
 								</div>
 								<!-- Panel4 row2 -->
@@ -279,7 +284,8 @@
 									<p>Alapító okirat száma</p>
 									<div class="input-group">
 										<input name="alapOkSzId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1" required pattern="[0-9]*">
+											placeholder="" aria-describedby="basic-addon1" required
+											pattern="[0-9]*">
 									</div>
 								</div>
 								<!-- Panel4 row3 -->
@@ -296,7 +302,8 @@
 									<p>Cégbírósági bejegyzés száma*</p>
 									<div class="input-group">
 										<input name="cegBejSzId" type="text" class="form-control"
-											placeholder="" aria-describedby="basic-addon1" required pattern="[0-9]*">
+											placeholder="" aria-describedby="basic-addon1" required
+											pattern="[0-9]*">
 									</div>
 								</div>
 								<!-- Panel4 row5 -->
@@ -464,7 +471,7 @@
 			<div class="row featurette">
 				<div class="col-md-6">
 
-					<a href="index.html" class="btn btn-info" role="button">Mégse</a>
+					<a href="ForwardToMainJSP" class="btn btn-info" role="button">Mégse</a>
 
 				</div>
 				<!-- col-md-6 1 -->
