@@ -14,7 +14,7 @@ var progress = $("#progress"),
 
 if (numValid == 0) {
     progress.attr("value", "0");
-    progressMessage.text("Please fill the required fields, thank you!");
+    progressMessage.text("Kérem töltse ki a *-gal jelölt mezőket!");
 }
 if (numValid == 1) {
     progress.attr("value", "10");
@@ -47,7 +47,7 @@ if (numValid == 7) {
 }
 if (numValid == 8) {
     progress.attr("value", "100");
-    progressMessage.text("Please Click to the Regisztracio button!");
+    progressMessage.text("Katiintson a Befejezés gombra!");
 }
 //if (numValid == 9) {
 //    progress.attr("value", "90");

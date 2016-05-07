@@ -1,16 +1,16 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+
 <%@page import="com.regisztracio.models.BelfoldiTermeszetesSzemely"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
-<meta name="author" content="">
+<meta charset="UTF-8">
+
 <!--     <link rel="icon" href="http://getbootstrap.com/favicon.ico"> -->
 
 <title>Sikeres BTSZ regisztráció</title>
@@ -55,7 +55,7 @@
 	<div role="navigation" class="navbar navbar-fixed-top">
 		<a href="ForwardToMainJSP" class="navbar-brand navbar-brand-logo">
 			<div class="logo">
-				<img src="resources/img/logo.png" />
+				<img src="resources/img/logo.svg" />
 			</div>
 			<div class="brand">Profit Bank</div>
 		</a>
@@ -101,7 +101,7 @@
 		<br> <br>
 		<p>
 			<strong>Köszönjük hogy megtisztel bizalmával!</strong> A <strong>ProfitBankt</strong>
-			A lehető legagyobb biztonsággal kezeli személyes adatait, melyek:
+			A legagyobb biztonsággal kezeli személyes adatait, melyek:
 		</p>
 		<br>
 		<div class="panel-group" id="accordion">
@@ -115,9 +115,9 @@
 				<div id="collapse1" class="panel-collapse collapse in">
 					<div class="panel-body">
 						<ul class="list-group">
-							<li class="list-group-item">Előtag: <%=btsz.getNevElotag()%></li>
+							<li class="list-group-item">Tag: <%=btsz.getNevElotag()%></li>
 							<li class="list-group-item">Vezetéknév: <%=btsz.getNevVezetek()%></li>
-							<li class="list-group-item">Első utónév: <%=btsz.getNevKereszt()%></li>
+							<li class="list-group-item">Utónév: <%=btsz.getNevKereszt()%></li>
 							<li class="list-group-item">Második utónév: <%=btsz.getNevUto()%></li>
 							<li class="list-group-item">Leánykori / Születési név: <%=btsz.getNevSzuletesi()%></li>
 						</ul>
@@ -174,9 +174,10 @@
 							<li class="list-group-item">Adóazonosító jel: <%=btsz.getAdoazonositoJel()%></li>
 							<li class="list-group-item">Személyi igazolvány száma: <%=btsz.getSzigSzam()%></li>
 							<li class="list-group-item">Szig. kiállító hatóság neve: <%=btsz.getSzigKHNeve()%></li>
-							<li class="list-group-item">Szig. kiállító hatóság székhelye: <%=btsz.getSzigKHSzekhelye()%></li>
+							<li class="list-group-item">Szig. kiállító hatóság
+								székhelye: <%=btsz.getSzigKHSzekhelye()%></li>
 							<li class="list-group-item">Lakcímkártya száma: <%=btsz.getLakcimkartya()%></li>
-							<li class="list-group-item">Születési idő: <%=btsz.getSzulIdo()%></li>
+							<li class="list-group-item">Születési ideje: <%=btsz.getSzulIdo()%></li>
 							<li class="list-group-item">Születési hely: <%=btsz.getSzulHely()%></li>
 							<li class="list-group-item">Anyja neve: <%=btsz.getAnyjaNeve()%></li>
 							<li class="list-group-item">Útlevél száma: <%=btsz.getUtlevelSzama()%></li>
@@ -207,7 +208,7 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a data-toggle="collapse" data-parent="#accordion"
-							href="#collapse6">Számlát érintő rendelkezések </a>
+							href="#collapse6">Számlával kapsolatos rendelkezések </a>
 					</h4>
 				</div>
 				<div id="collapse6" class="panel-collapse collapse">
@@ -231,7 +232,7 @@
 					<div class="panel-body">
 						<ul class="list-group">
 							<li class="list-group-item">Ügyfél azonosító (ID): <%=btsz.getUserID()%></li>
-							<li class="list-group-item">Első belépés kódja (Password): <%=btsz.getUserCode()%></li>
+							<li class="list-group-item">Belépés kódja (Password): <%=btsz.getUserCode()%></li>
 						</ul>
 					</div>
 				</div>
@@ -244,7 +245,7 @@
 		<!-- FOOTER -->
 		<footer>
 		<p class="pull-right">
-			<a href="ForwardToMainJSP"><< Főoldal</a>
+			<a href="ForwardToMainJSP"><< Vissza a nyitó oldalra</a>
 		</p>
 		<p>© 2016 Koncz Gabor, Szakdolgozat</p>
 		</footer>

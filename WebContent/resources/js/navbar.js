@@ -1,10 +1,10 @@
 $(document).scroll(function() {
    
     if( $(this).scrollTop() > 260 ) {
-        $('.navbar').addClass('grey_bg');
+        $('.navbar').addClass('green_bg');
     }
     else {
-        $('.navbar').removeClass('grey_bg');
+        $('.navbar').removeClass('green_bg');
     }
     
   
