@@ -101,7 +101,7 @@
 		<br> <br>
 		<p>
 			<strong>Köszönjük hogy megtisztel bizalmával!</strong> A <strong>ProfitBankt</strong>
-			A legagyobb biztonsággal kezeli személyes adatait, melyek:
+			A legnagyobb biztonsággal kezeli személyes adatait, melyek:
 		</p>
 		<br>
 		<div class="panel-group" id="accordion">
