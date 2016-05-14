@@ -115,7 +115,7 @@
 				<div class="container">
 					<div class="carousel-caption">
 						<h1>A megtervezett jövő</h1>
-						<p>Biztos hozem, biztos profit! Szakembereink bármikor a
+						<p>Biztos hozam, biztos profit! Szakembereink bármikor a
 							rendelkezésére állnak!</p>
 						<p>
 							<a class="btn btn-lg btn-primary" href="" role="button">Valósítsa
